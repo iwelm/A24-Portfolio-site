@@ -1,0 +1,71 @@
+.wrapper {
+    .accordeon {
+        margin: 0 0 60px 0;
+        .grid-accordeon {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 140px;
+
+            @media screen and (max-width: $breakpoint-md) {
+                grid-template-columns: 1fr;
+            }
+
+            .accordion__container {
+                cursor: pointer;
+                margin-bottom: 45px;
+
+                .line {
+                    width: inherit;
+                    border: 1px solid var(--color-light-blue);
+                    transition: transform 1.3s ease;
+                }
+                .accordion__header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h3 {
+                        font-weight: 300;
+                        font-size: var(--font-size-h2);
+                        color: var(--color-light-blue);
+                    }
+
+                    .icon {
+                        color: var(--color-light-blue);
+                        font-size: var(--font-size-icon-plus);
+                        transition: transform 1s $ease-out-cubic;
+                    }
+                }
+                //.accordion__content représente le contenu caché par défaut
+                .accordion__content {
+                    display: none;
+
+                    span {
+                        font-weight: 600;
+                        color: var(--color-dark-blue);
+                        font-size: var(--font-size-p2);
+                    }
+
+                    p {
+                        font-size: var(--font-size-p2);
+                        color: var(--color-light-blue);
+                        font-weight: 300;
+                    }
+                }
+
+                &.is-active {
+                    .icon {
+                        transform: rotate(45deg);
+                    }
+
+                    .line {
+                        border: 2px solid var(--color-light-blue);
+                        transform: translateY(5px);
+                    }
+                    .accordion__content {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

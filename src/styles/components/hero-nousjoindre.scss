@@ -1,0 +1,20 @@
+.hero-nousjoindre {
+    padding: 70px 0;
+    .wrapper {
+        h2 {
+            margin: 0 0 30px 0;
+        }
+        .card_media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                border-radius: 30px;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

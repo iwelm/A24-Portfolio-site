@@ -1,0 +1,97 @@
+/* ==========================================================================
+   scrolly / component
+   ========================================================================== */
+
+// Testez désactiver/activer javascript -- cmd shift P -- dans le navigateur
+
+.has-js {
+    [data-scrolly='fromBottom'] {
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: translateY(
+            90px
+        ); // -- https://easings.net/fr -- every animation type
+        transition: all 1.3s $ease-out-expo;
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromLeft'] {
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: translateX(
+            -90px
+        ); // gere de quelle coté le scrolly arrive. Gauche, droite, top, bottom etc.
+        transition: all 2.3s $ease-out-expo; // gere le type d'Animations a utiliser -- Settings/easing.scss
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromRight'] {
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: translateX(90px);
+        transition: all 1.3s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // A intégrer dans le HTML fromTOP
+    [data-scrolly='fromTop'] {
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: translateY(-80px);
+        transition: all 2.3s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    [data-scrolly='fromFlipRight'] {
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: rotatey(140deg);
+        transition: all 1.3s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotate(0);
+        }
+    }
+
+    [data-scrolly='flipFromBottom'] {
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: rotatex(180deg);
+        transition: all 2s $ease-out-expo;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotate(0);
+        }
+    }
+
+    [data-scrolly='fromChatGpt'] {
+        //********Animations suggéré/demander/recommander par ChatGPT********
+        //décorations pour cacher l'éléments
+        opacity: 0;
+        transform: translateY(90px) scaleY(0.00000001); // -- https://easings.net/fr -- every animation type
+        transition: opacity 0.8s $ease-out-sine,
+            transform 0.8s $ease-in-out-sine;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0) scaleY(1);
+        }
+    }
+}

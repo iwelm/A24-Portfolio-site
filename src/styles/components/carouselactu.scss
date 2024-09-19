@@ -1,0 +1,114 @@
+.actualite {
+    margin-bottom: 100px;
+    overflow: hidden;
+
+    .swiper-pagination-bullet {
+        opacity: 0;
+    }
+
+    .wrapper {
+        .swiper {
+            overflow: visible;
+        }
+
+        h2 {
+            font-size: var(--font-size-h1);
+            font-weight: 400;
+            color: var(--color-dark-blue);
+        }
+
+        .card {
+            .card_media {
+                img {
+                    display: block;
+                    object-fit: cover;
+                    border-radius: 20px 20px 0 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .card_content {
+                background-color: var(--color-dark-blue);
+                border-radius: 0 0 20px 20px;
+                width: inherit;
+                height: auto;
+                margin: 0;
+
+                .top_content {
+                    padding: 23px 25px;
+                    h3 {
+                        font-weight: 600;
+                        font-size: 16px;
+                        margin: 0;
+                        color: var(--color-white-blue);
+                    }
+
+                    p {
+                        font-size: 20px;
+                        line-height: 145%;
+                        font-weight: normal;
+                        color: var(--color-white-blue);
+                        margin: 13px 0;
+                    }
+                }
+            }
+
+            .bottom_content {
+                padding: 0 25px 23px 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: var(--color-white-blue);
+                }
+
+                a {
+                    position: relative;
+                    .rond {
+                        border-radius: 100%;
+                        width: 50px;
+                        height: 50px;
+                        background-color: var(--color-light-blue);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        padding: 2px;
+
+                        svg {
+                            color: var(--color-white-blue);
+                            scale: 1.5;
+                            transition: transform 0.4s ease-out;
+                        }
+
+                        &:hover {
+                            background-color: var(--color-white-blue);
+                            opacity: 1;
+
+                            padding: 2px;
+
+                            svg {
+                                color: var(--color-dark-blue);
+                                transform: translateX(5px);
+                            }
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: var(--color-light-blue);
+                            opacity: 0;
+                            transition: transform 0.4s ease-out; /////////Transition de la flèche non animé aussi ici!!!!!
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

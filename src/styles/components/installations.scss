@@ -1,0 +1,95 @@
+.installations {
+    margin-bottom: 85px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: var(--font-size-h1);
+    color: var(--color-dark-blue);
+    margin-bottom: 40px;
+}
+
+.wrapper {
+    .plusinstallations {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease-in;
+            border-radius: 20px 20px 0 0;
+            p {
+                color: var(--color-light-blue);
+                font-weight: 400;
+                font-size: 20px;
+                margin: 0;
+                padding: 10px;
+            }
+
+            .line {
+                width: inherit;
+                border: 1px solid var(--color-dark-blue);
+            }
+
+            &:hover {
+                background-color: var(--color-dark-blue);
+                border-radius: 20px 20px 0 0;
+
+                p {
+                    color: var(--color-white-blue);
+                }
+            }
+
+            &::after {
+                content: '';
+
+                transform: scaleY(1);
+            }
+        }
+    }
+
+    .cards-installations {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 150px;
+
+        @media screen and (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            margin-bottom: 105px;
+
+            .titre-section {
+                h3 {
+                    font-size: var(--font-size-h2);
+                    font-weight: 300;
+                    color: var(--color-light-blue);
+                    margin: 0 0 10px 0;
+                }
+
+                .line {
+                    width: inherit;
+                    border: 1px solid var(--color-light-blue);
+                }
+            }
+
+            .card_content {
+                span {
+                    font-weight: 600;
+                    color: var(--color-dark-blue);
+                    font-size: var(--font-size-p2);
+                }
+
+                p {
+                    font-size: var(--font-size-p2);
+                    color: var(--color-light-blue);
+                    font-weight: 300;
+                    margin-top: 15px;
+                    max-width: 560px;
+                }
+            }
+        }
+    }
+}

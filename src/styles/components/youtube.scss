@@ -1,0 +1,80 @@
+/* ==========================================================================
+   video / component
+   ========================================================================== */
+
+.tourisme {
+    background-color: var(--color-dark-blue);
+    border-radius: 30px;
+    padding: 30px 90px;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding: 15px 60px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: 10px 40px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: 5px 21px;
+    }
+}
+
+.youtube {
+    color: var(--color-white);
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding-bottom: 0;
+    }
+
+    position: relative;
+    cursor: pointer;
+
+    img {
+        object-fit: cover;
+        border-radius: 30px;
+        display: block;
+    }
+
+    .icon {
+        opacity: 0;
+        position: absolute;
+        top: 36%;
+        left: 45%;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+        transition: transform 0.4s $ease-out-expo;
+        z-index: 2;
+        font-size: var(--font-size-icon);
+
+        .is-video-ready & {
+            opacity: 1;
+        }
+    }
+
+    &:hover .icon {
+        transform: translateX(15px);
+    }
+}
+
+.youtube__media {
+    @include cover();
+    border-radius: 30px;
+    aspect-ratio: 23/9;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+
+    @media screen and (max-width: $breakpoint-md) {
+        border-radius: 20px 20px 0 0;
+    }
+
+    img {
+        aspect-ratio: 23/9;
+
+        @media screen and (max-width: $breakpoint-md) {
+            border-radius: 20px 20px 0 0;
+        }
+    }
+}
