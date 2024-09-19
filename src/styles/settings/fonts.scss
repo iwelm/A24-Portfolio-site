@@ -2,56 +2,17 @@
    FONTS / SETTINGS
    ========================================================================== */
 /// Font family
-
-@font-face {
-    font-family: 'neuemontreal';
-    font-weight: normal; // Regular == normal (300);
-    src: url('../assets/fonts/neuemontreal-regular-webfont.woff2')
-            format('woff2'),
-        url('../assets/fonts/neuemontreal-regular-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'neuemontreal';
-    font-weight: 500; // medium == 400;
-    src: url('../assets/fonts/neuemontreal-medium-webfont.woff2')
-            format('woff2'),
-        url('../assets/fonts/neuemontreal-medium-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'neuemontreal';
-    font-weight: bold; // bold == 600;
-    src: url('../assets/fonts/neuemontreal-bold-webfont.woff2') format('woff2'),
-        url('../assets/fonts/neuemontreal-bold-webfont.woff') format('woff');
-}
-
-///
-///
-///
-///
-///
-///
-///
 :root {
-    --font-primary: 'neuemontreal-regular-webfont', sans-serif;
-    --font-secondary: 'neuemontreal-medium-webfont', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
 
     --font-size-content: #{typo(16px, 18px)};
 
     /// Grosseur des textes
-    --font-size-nav: #{typo(16px, 25px)};
-    --font-size-meteo: #{typo(35px, 42px)};
-    --font-size-border: #{typo(25px, 650px)};
-    --font-size-p: #{typo(10px, 22px)};
-    --font-size-p2: #{typo(15px, 22px)};
-    --font-size-small-p: #{typo(10px, 16px)};
-    --font-size-footer-logo: #{typo(45px, 66px)};
-    --font-size-icon: #{typo(12px, 18px)};
-    --font-size-icon-plus: #{typo(12px, 24px)};
-    --font-size-rond: #{typo(30px, 50px)};
     --font-size-h1: #{typo(25px, 50px)};
     --font-size-h2: #{typo(20px, 35px)};
     --font-size-h3: #{typo(15px, 35px)};
     --font-size-h4: #{typo(14px, 27px)};
+
+    --font-size-nav: #{typo(14px, 28px)};
 }
