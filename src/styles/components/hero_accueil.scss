@@ -1,5 +1,36 @@
 .hero {
+    margin-top: 100px;
     .wrapper {
         text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .hero_left {
+            position: relative;
+            h1 {
+                color: var(--color-black);
+                margin: 0;
+            }
+
+            .horizontal_align {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                top: 70%;
+                left: 40%;
+                margin: 0;
+                p {
+                    font-size: var(--font-size-p-hero);
+                    color: var(--color-orange);
+                    margin: 0;
+                }
+                h2 {
+                    color: var(--color-black);
+                    margin: 0;
+                }
+            }
+        }
     }
 }

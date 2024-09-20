@@ -2,24 +2,6 @@
    video / component
    ========================================================================== */
 
-.tourisme {
-    background-color: var(--color-dark-blue);
-    border-radius: 30px;
-    padding: 30px 90px;
-
-    @media screen and (max-width: $breakpoint-md) {
-        padding: 15px 60px;
-    }
-
-    @media screen and (max-width: $breakpoint-sm) {
-        padding: 10px 40px;
-    }
-
-    @media screen and (max-width: $breakpoint-sm) {
-        padding: 5px 21px;
-    }
-}
-
 .youtube {
     color: var(--color-white);
     text-align: center;
@@ -62,7 +44,6 @@
     border-radius: 30px;
     aspect-ratio: 23/9;
     object-fit: cover;
-    width: 100%;
     height: auto;
     display: block;
 
@@ -71,8 +52,6 @@
     }
 
     img {
-        aspect-ratio: 23/9;
-
         @media screen and (max-width: $breakpoint-md) {
             border-radius: 20px 20px 0 0;
         }
