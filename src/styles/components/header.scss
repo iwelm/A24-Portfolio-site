@@ -15,6 +15,17 @@
     z-index: 10;
     transition: transform 0.9s $ease-in-out-back; // *****Vitesse animations header******
 
+    svg {
+        font-size: var(--font-size-logo);
+        transform: scale(1) translateY(0px);
+        transition: all 0.3s $ease-out-sine;
+
+        &:hover {
+            color: var(--color-orange);
+            transform: scale(1.05) translateY(10px);
+        }
+    }
+
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -110,13 +121,13 @@
         }
     }
 
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: $breakpoint-nav) {
         display: none;
     }
 }
 
 nav {
-    background: var(--color-black);
+    background: var(--color-white);
     position: absolute;
     top: 0;
     left: 0;
@@ -149,6 +160,35 @@ nav {
             transform: translateY(0);
         }
 
+        li {
+            // en menu burger, empeche les éléments d'etre à gauche
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @keyframes blink-bg {
+            //////////////////////////////// ANIMATIONS BTN PROJET
+            0% {
+                color: var(--color-grey);
+                background-color: var(--color-white);
+                transform: translateY(0%) scale(1);
+            }
+
+            100% {
+                background-color: var(--color-orange);
+                color: var(--color-white);
+                transform: translateY(0%) scale(1.05);
+            }
+        }
+        :nth-child(1) a {
+            animation: blink-bg 1.5s infinite alternate $ease-in-out-circ;
+
+            &:hover {
+                animation-play-state: paused; //////////////////////////////// BTN MIS EN PAUSE EN HOVER
+                background-color: var(--color-orange);
+            }
+        }
         a {
             display: block;
             text-align: center;
@@ -158,17 +198,20 @@ nav {
             position: relative;
             text-decoration: none;
             border-radius: 20px;
+            min-width: 200px;
             border: 1px solid var(--color-grey);
-            padding: 5px 20px;
-            transform: all;
-            transition: 0.4s all;
+            padding: 10px 20px;
+            align-items: center;
+            transform: translateY(0%) scale(1); // Animations des boutons dans le menu, état NON HOVER
+            transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
 
             &:hover {
                 text-decoration: none;
-                transform: color;
+                color: var(--color-white);
+                background-color: var(--color-orange);
             }
 
-            @media screen and (min-width: $breakpoint-md) {
+            @media screen and (min-width: $breakpoint-nav) {
                 color: var(--color-grey);
                 position: relative;
                 text-transform: uppercase;
@@ -179,20 +222,22 @@ nav {
                     top: 100%;
                     left: 0;
                     content: '';
-                    background-color: var(--color-grey);
                     transition: 0.3s all;
+                    border: 0px;
                 }
 
                 &:hover {
                     text-decoration: none;
                     background-color: var(--color-orange);
                     color: var(--color-white);
+                    transform: translateY(20%) scale(1.03); // Animations des boutons dans le menu, état HOVER ACTIF
+                    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.3); // Animations des boutons dans le menu, état HOVER ACTIF
                 }
             }
         }
     }
 
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: $breakpoint-nav) {
         display: block;
         background: unset;
         position: relative;
