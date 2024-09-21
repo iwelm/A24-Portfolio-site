@@ -11,6 +11,15 @@
             h1 {
                 color: var(--color-black);
                 margin: 0;
+                font-weight: 700;
+            }
+            .hero_p {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                font-size: var(--font-size-p-hero);
+                color: var(--color-orange);
             }
 
             .horizontal_align {
@@ -18,17 +27,88 @@
                 justify-content: space-between;
                 align-items: center;
                 position: absolute;
-                top: 70%;
-                left: 40%;
+                top: 75%;
+                left: 75%;
                 margin: 0;
-                p {
-                    font-size: var(--font-size-p-hero);
-                    color: var(--color-orange);
-                    margin: 0;
-                }
+                z-index: 4;
+                width: 100%;
+
                 h2 {
                     color: var(--color-black);
                     margin: 0;
+                }
+            }
+
+            .bouton {
+                @keyframes blink-bg {
+                    //////////////////////////////// ANIMATIONS BTN PROJET
+                    0% {
+                        color: var(--color-grey);
+                        background-color: var(--color-white);
+                        transform: translateY(0%) scale(1);
+                    }
+
+                    100% {
+                        background-color: var(--color-orange);
+                        color: var(--color-white);
+                        transform: translateY(0%) scale(1.05);
+                    }
+                }
+
+                animation: blink-bg 1.5s infinite alternate $ease-in-out-circ;
+
+                &:hover {
+                    animation-play-state: paused; //////////////////////////////// BTN MIS EN PAUSE EN HOVER
+                    background-color: var(--color-orange);
+                }
+
+                position: absolute;
+                bottom: -150px;
+                left: 10px;
+                display: block;
+                text-align: center;
+                color: var(--color-grey);
+                font-size: var(--font-size-nav);
+                text-transform: uppercase;
+                position: relative;
+                text-decoration: none;
+                border-radius: 15px;
+                max-width: var(--font-size-btn_hero_width);
+                font-size: var(--font-size-btn-hero);
+                border: 1px solid var(--color-grey);
+                padding: 5px 20px;
+                align-items: center;
+                transform: translateY(0%) scale(1); // Animations des boutons dans le menu, état NON HOVER
+                transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
+
+                &:hover {
+                    text-decoration: none;
+                    color: var(--color-white);
+                    background-color: var(--color-orange);
+                }
+
+                @media screen and (min-width: $breakpoint-nav) {
+                    color: var(--color-grey);
+                    position: relative;
+                    text-transform: uppercase;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        content: '';
+                        transition: 0.3s all;
+                        border: 0px;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: var(--color-orange);
+                        color: var(--color-white);
+                        transform: translateY(20%) scale(1.03); // Animations des boutons dans le menu, état HOVER ACTIF
+                        box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.3); // Animations des boutons dans le menu, état HOVER ACTIF
+                    }
                 }
             }
         }

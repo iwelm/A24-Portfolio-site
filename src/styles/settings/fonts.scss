@@ -9,13 +9,15 @@
     --font-size-content: #{typo(16px, 18px)};
 
     /// Grosseur des textes
-    --font-size-h1: #{typo(40px, 200px)};
-    --font-size-h2: #{typo(40px, 150px)};
+    --font-size-h1: #{typo(40px, 150px)};
+    --font-size-h2: #{typo(40px, 130px)};
     --font-size-h3: #{typo(15px, 35px)};
     --font-size-h4: #{typo(14px, 27px)};
-    --font-size-p-hero: #{typo(25px, 40px)};
+    --font-size-p-hero: #{typo(25px, 30px)};
 
-    --font-size-nav: #{typo(14px, 28px)};
+    --font-size-nav: #{typo(14px, 24px)};
+    --font-size-btn-hero: #{typo(16px, 30px)};
+    --font-size-btn_hero_width: #{typo(155px, 300px)};
     --font-size-logo: #{typo(77px, 120px)};
     --font-size-border: #{typo(3px, 3px)};
 }

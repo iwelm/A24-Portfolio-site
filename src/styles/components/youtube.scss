@@ -17,6 +17,7 @@
         object-fit: cover;
         border-radius: 30px;
         display: block;
+        max-width: 800px;
     }
 
     .icon {
@@ -41,8 +42,7 @@
 
 .youtube__media {
     @include cover();
-    border-radius: 30px;
-    aspect-ratio: 23/9;
+    border-radius: 20px;
     object-fit: cover;
     height: auto;
     display: block;

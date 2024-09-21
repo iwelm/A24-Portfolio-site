@@ -15,6 +15,7 @@
     height: var(--header-height);
     z-index: 10;
     transition: transform 0.9s $ease-in-out-back; // *****Vitesse animations header******
+    border-bottom: 1px solid var(--color-grey);
 
     svg {
         font-size: var(--font-size-logo);
@@ -168,28 +169,6 @@ nav {
             text-align: center;
         }
 
-        @keyframes blink-bg {
-            //////////////////////////////// ANIMATIONS BTN PROJET
-            0% {
-                color: var(--color-grey);
-                background-color: var(--color-white);
-                transform: translateY(0%) scale(1);
-            }
-
-            100% {
-                background-color: var(--color-orange);
-                color: var(--color-white);
-                transform: translateY(0%) scale(1.05);
-            }
-        }
-        :nth-child(1) a {
-            animation: blink-bg 1.5s infinite alternate $ease-in-out-circ;
-
-            &:hover {
-                animation-play-state: paused; //////////////////////////////// BTN MIS EN PAUSE EN HOVER
-                background-color: var(--color-orange);
-            }
-        }
         a {
             display: block;
             text-align: center;
@@ -198,10 +177,10 @@ nav {
             text-transform: uppercase;
             position: relative;
             text-decoration: none;
-            border-radius: 20px;
+            border-radius: 15px;
             min-width: 200px;
             border: 1px solid var(--color-grey);
-            padding: 10px 20px;
+            padding: 5px 0px;
             align-items: center;
             transform: translateY(0%) scale(1); // Animations des boutons dans le menu, état NON HOVER
             transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
