@@ -1,17 +1,32 @@
 .hero {
     margin-top: 100px;
+
+    video {
+        max-width: none;
+        height: auto;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        z-index: -2;
+        object-fit: cover;
+        filter: brightness(0.6);
+    }
     .wrapper {
-        text-transform: uppercase;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .hero_left {
             position: relative;
+            margin-top: 50px;
             h1 {
-                color: var(--color-black);
+                color: var(--color-white);
                 margin: 0;
-                font-weight: 700;
+                font-weight: 800;
+                text-shadow: 0px 4px 40px rgba(84, 84, 84, 1);
             }
             .hero_p {
                 display: flex;
@@ -19,24 +34,10 @@
                 align-items: center;
                 gap: 20px;
                 font-size: var(--font-size-p-hero);
-                color: var(--color-orange);
-            }
-
-            .horizontal_align {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: absolute;
-                top: 75%;
-                left: 75%;
-                margin: 0;
-                z-index: 4;
-                width: 100%;
-
-                h2 {
-                    color: var(--color-black);
-                    margin: 0;
-                }
+                color: var(--color-white);
+                text-transform: uppercase;
+                font-weight: 600;
+                text-shadow: 0px 4px 40px rgba(84, 84, 84, 1);
             }
 
             .bouton {
@@ -62,9 +63,6 @@
                     background-color: var(--color-orange);
                 }
 
-                position: absolute;
-                bottom: -150px;
-                left: 10px;
                 display: block;
                 text-align: center;
                 color: var(--color-grey);
