@@ -1,5 +1,6 @@
 .accordeon {
     margin: 0 0 60px 0;
+
     .grid-accordeon {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -7,6 +8,7 @@
         border: 2px solid var(--color-grey);
         border-radius: 30px;
         padding: 15px 30px;
+        width: var(--width-moi);
 
         @media screen and (max-width: $breakpoint-md) {
             grid-template-columns: 1fr;
@@ -16,15 +18,13 @@
             cursor: pointer;
             margin-bottom: 45px;
 
-            .line {
-                width: inherit;
-                border: 1px solid var(--color-orange);
-                transition: transform 1.3s ease;
-            }
             .accordion__header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                border-bottom: 2px solid var(--color-orange);
+                transition: transform 1.3s ease;
                 h3 {
                     font-weight: 300;
                     font-size: var(--font-size-h2);
@@ -53,11 +53,15 @@
                 }
                 .accordion__content {
                     display: block;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    align-items: center;
-                    justify-items: start;
-                    justify-content: center;
+
+                    ul {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: flex-start;
+                        justify-items: start;
+                        justify-content: center;
+                        max-height: 120px;
+                    }
 
                     p {
                         font-size: var(--font-size-p-plus);

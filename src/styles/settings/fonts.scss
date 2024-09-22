@@ -10,7 +10,7 @@
 
     /// Grosseur des textes
     --font-size-h1: #{typo(40px, 80px)};
-    --font-size-h2: #{typo(40px, 40px)};
+    --font-size-h2: #{typo(20px, 40px)};
     --font-size-h3: #{typo(15px, 35px)};
     --font-size-h4: #{typo(14px, 27px)};
     --font-size-p-hero: #{typo(16px, 30px)};
@@ -22,5 +22,7 @@
     --font-size-border: #{typo(3px, 3px)};
 
     --font-size-btn-plus: #{typo(20px, 24px)};
-    --font-size-p-plus: #{typo(16px, 26px)};
+    --font-size-p-plus: #{typo(16px, 22px)};
+    --font-size-p-moi2: #{typo(20px, 30px)};
+    --width-moi: #{typo(170px, 800px)};
 }
