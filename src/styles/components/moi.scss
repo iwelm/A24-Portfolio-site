@@ -1,5 +1,5 @@
 .moi {
-    padding-top: 100px;
+    padding-top: 50px;
     .grid_moi {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -11,19 +11,21 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 50px;
+
+            .orange {
+                color: var(--color-orange);
+                font-weight: 700;
+            }
             .info_moi_1 {
                 padding: 25px 35px;
                 border: 2px solid var(--color-grey);
                 border-radius: 20px;
                 width: var(--width-moi);
 
-                .orange {
-                    color: var(--color-orange);
-                }
-
                 h2 {
                     font-size: var(--font-size-h2);
                     margin: 0;
+                    font-weight: 500;
                 }
             }
 
@@ -34,13 +36,18 @@
 
                 p {
                     font-size: var(--font-size-p-moi2);
+                    margin: 0;
+                }
+                h3 {
+                    color: var(--color-orange);
+                    margin: 40px 0 0 0;
                 }
             }
         }
 
         img {
             width: 625px;
-            height: 853px;
+            height: 693px;
             object-fit: cover;
             border-radius: 20px;
         }

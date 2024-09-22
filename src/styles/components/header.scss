@@ -4,7 +4,7 @@
 
 .header {
     --header-height: 100px;
-    background-color: none;
+    background-color: var(--color-white);
     align-items: center;
     display: flex;
     justify-content: space-between;

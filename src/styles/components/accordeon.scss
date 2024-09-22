@@ -7,7 +7,7 @@
         column-gap: 140px;
         border: 2px solid var(--color-grey);
         border-radius: 30px;
-        padding: 15px 35px;
+        padding: 35px 35px;
         width: var(--width-moi);
 
         @media screen and (max-width: $breakpoint-md) {
@@ -16,20 +16,20 @@
 
         .accordion__container {
             cursor: pointer;
-
-            min-height: 240px;
+            min-height: 135px;
 
             .accordion__header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-bottom: 35px;
-                border-bottom: 2px solid var(--color-orange);
+                margin-bottom: 20px;
+                border-bottom: 3px solid var(--color-orange);
                 transition: transform 1.3s ease;
                 h3 {
-                    font-weight: 300;
+                    font-weight: 600;
                     font-size: var(--font-size-h2);
                     color: var(--color-orange);
+                    margin: 0 7px 0;
                 }
 
                 .icon {
@@ -56,11 +56,10 @@
                     display: block;
 
                     ul {
+                        margin: 0;
                         display: grid;
                         grid-template-columns: 1fr 1fr;
-                        align-items: flex-start;
-                        justify-items: start;
-                        justify-content: center;
+
                         max-height: 120px;
                         margin-bottom: 0;
                     }
