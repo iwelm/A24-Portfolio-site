@@ -15,18 +15,11 @@ export default class Accordeon {
 
   toggleAccordion(event) {
     if ('notClosing' in this.elementHTML.dataset) {
-      // data-no-closing placé sur la balise qui va toggle add/remove la classe is-active
-      const accordeonSelectionner = event.currentTarget;
-      accordeonSelectionner.classList.toggle('is-active');
+      this.accordeonSelectionner = event.currentTarget;
+      this.accordeonSelectionner.classList.toggle('is-active');
+    } else if (this.accordeonSelectionner.classList.contains('is-active')) {
+      this.accordeonSelectionner = event.currentTarget;
+      this.accordeonSelectionner.classList.remove('is-active');
     }
-
-    if ('autoOpen' in this.elementHTML.dataset) {
-      // meme chose que data-not-closing mais au click elle ferme tout les autres accordeon sauf elle qui est actif.
-      for (let i = 0; i < this.accordeons.length; i++) {
-        const accordeonSelectionner = this.accordeons[i];
-        accordeonSelectionner.classList.remove('is-active');
-      }
-    }
-    event.currentTarget.classList.add('is-active');
   }
 }

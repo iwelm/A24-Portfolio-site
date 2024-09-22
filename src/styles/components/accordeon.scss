@@ -1,68 +1,67 @@
-.wrapper {
-    .accordeon {
-        margin: 0 0 60px 0;
-        .grid-accordeon {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 140px;
+.accordeon {
+    margin: 0 0 60px 0;
+    .grid-accordeon {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 140px;
+        border: 2px solid var(--color-grey);
+        border-radius: 30px;
+        padding: 15px 30px;
 
-            @media screen and (max-width: $breakpoint-md) {
-                grid-template-columns: 1fr;
+        @media screen and (max-width: $breakpoint-md) {
+            grid-template-columns: 1fr;
+        }
+
+        .accordion__container {
+            cursor: pointer;
+            margin-bottom: 45px;
+
+            .line {
+                width: inherit;
+                border: 1px solid var(--color-orange);
+                transition: transform 1.3s ease;
+            }
+            .accordion__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h3 {
+                    font-weight: 300;
+                    font-size: var(--font-size-h2);
+                    color: var(--color-orange);
+                }
+
+                .icon {
+                    color: var(--color-orange);
+                    font-size: var(--font-size-btn-plus);
+                    transition: transform 1s $ease-out-cubic;
+                }
+            }
+            //.accordion__content représente le contenu caché par défaut
+            .accordion__content {
+                display: none;
             }
 
-            .accordion__container {
-                cursor: pointer;
-                margin-bottom: 45px;
+            &.is-active {
+                .icon {
+                    transform: rotate(45deg);
+                }
 
                 .line {
-                    width: inherit;
-                    border: 1px solid var(--color-light-blue);
-                    transition: transform 1.3s ease;
+                    border: 3px solid var(--color-light-blue);
+                    transform: translateY(5px);
                 }
-                .accordion__header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    h3 {
-                        font-weight: 300;
-                        font-size: var(--font-size-h2);
-                        color: var(--color-light-blue);
-                    }
-
-                    .icon {
-                        color: var(--color-light-blue);
-                        font-size: var(--font-size-icon-plus);
-                        transition: transform 1s $ease-out-cubic;
-                    }
-                }
-                //.accordion__content représente le contenu caché par défaut
                 .accordion__content {
-                    display: none;
-
-                    span {
-                        font-weight: 600;
-                        color: var(--color-dark-blue);
-                        font-size: var(--font-size-p2);
-                    }
+                    display: block;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    justify-items: start;
+                    justify-content: center;
 
                     p {
-                        font-size: var(--font-size-p2);
-                        color: var(--color-light-blue);
-                        font-weight: 300;
-                    }
-                }
-
-                &.is-active {
-                    .icon {
-                        transform: rotate(45deg);
-                    }
-
-                    .line {
-                        border: 2px solid var(--color-light-blue);
-                        transform: translateY(5px);
-                    }
-                    .accordion__content {
-                        display: block;
+                        font-size: var(--font-size-p-plus);
+                        margin: 0 0 5px 0;
                     }
                 }
             }
