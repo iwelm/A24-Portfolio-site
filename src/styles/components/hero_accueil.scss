@@ -1,11 +1,11 @@
 .hero {
-    margin-bottom: 220px;
+    position: relative;
     video {
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 90vh;
         width: 100vw;
-        position: absolute;
+        position: relative;
         z-index: -2;
         object-fit: cover;
         filter: brightness(0.6);
@@ -16,8 +16,8 @@
         align-items: center;
 
         .hero_left {
-            position: relative;
-            margin: 150px 0;
+            position: absolute;
+            top: 25%;
             h1 {
                 color: var(--color-white);
                 margin: 0;
