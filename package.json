@@ -11,6 +11,7 @@
     "build": "cross-env NODE_ENV=production gulp --openssl-legacy-provider build"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "swiper": "^11.1.1"
   },
   "devDependencies": {
