@@ -1,23 +1,27 @@
 .logiciel_langage {
-    margin-bottom: 100px;
+    margin-bottom: 260px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    .bottom {
+        position: relative;
+        bottom: -10rem;
+    }
     .card {
-        padding: 20px 30px;
+        padding: 20px 40px;
         display: flex;
-        max-width: 220px;
+        max-width: 180px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border: 1px solid var(--color-grey);
         border-radius: 20px;
         gap: 90px;
+
         h4 {
             font-size: var(--font-size-logiciel);
             text-transform: uppercase;
@@ -29,7 +33,7 @@
             background-color: var(--color-grey);
             padding: 25px;
             border-radius: 100%;
-            svg {
+            .icon {
                 font-size: var(--font-size-logiciel-icon);
                 color: var(--color-white);
             }
