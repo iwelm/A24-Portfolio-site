@@ -33,9 +33,8 @@ export default class Scrolly {
   watch(entries, observer) {
     for (let i = 0; i < entries.length; i++) {
       const entry = entries[i];
-      console.log(entries);
+
       const target = entry.target;
-      console.log(target);
 
       if (entry.isIntersecting) {
         target.classList.add('is-active');
