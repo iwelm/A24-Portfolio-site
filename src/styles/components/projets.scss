@@ -7,7 +7,7 @@
     .projet {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        height: 540px;
+        margin: 0 0 50px 0;
 
         .left {
             border: 1px solid var(--color-grey);
@@ -16,6 +16,54 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            .bouton {
+                &:hover {
+                    background-color: var(--color-orange);
+                }
+                text-align: center;
+                text-decoration: none;
+                border-radius: 15px;
+                max-width: var(--font-size-btn_hero_width);
+                font-size: var(--font-size-btn-hero);
+                border: 1px solid var(--color-grey);
+                padding: 5px 20px;
+                align-items: center;
+                transform: translateY(0%) scale(1); // Animations des boutons dans le menu, état NON HOVER
+                transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
+
+                a {
+                    color: var(--color-grey);
+                    text-decoration: none;
+                }
+
+                @media screen and (min-width: $breakpoint-nav) {
+                    color: var(--color-grey);
+                    position: relative;
+                    text-transform: uppercase;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        content: '';
+                        transition: 0.3s all;
+                        border: 0px;
+                    }
+
+                    &:hover {
+                        a {
+                            color: var(--color-white);
+                        }
+
+                        text-decoration: none;
+                        background-color: var(--color-orange);
+                        transform: translateY(20%) scale(1.03); // Animations des boutons dans le menu, état HOVER ACTIF
+                        box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.3); // Animations des boutons dans le menu, état HOVER ACTIF
+                    }
+                }
+            }
 
             h3 {
                 text-transform: uppercase;
@@ -27,14 +75,14 @@
             }
 
             h4 {
-                margin: 0 0 20px 0;
+                margin: 0 0 50px 0;
                 font-size: var(--font-size-h4-projet);
                 font-weight: 300;
                 font-style: italic;
             }
 
             p {
-                margin: 0;
+                margin: 0 0 10px 0;
                 font-size: var(--font-size-p-projet);
             }
 
@@ -64,10 +112,12 @@
             p {
                 font-size: var(--font-size-p-projet);
                 max-width: 400px;
+                margin: 0;
             }
 
             img {
                 object-fit: cover;
+                border-radius: 20px;
             }
         }
     }
