@@ -1,5 +1,11 @@
-.projets_accueil {
+.mes_projets {
     margin-bottom: 120px;
+
+    h1 {
+        text-transform: uppercase;
+        margin: 150px 0 120px 0;
+        font-size: var(--font-size-h1-projets);
+    }
 }
 
 .projets {
