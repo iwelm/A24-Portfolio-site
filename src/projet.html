@@ -1,1 +1,42 @@
-{% include "_partials/_header.html" with {title: 'Accueil'} %} {% include "_partials/_footer.html" %}
+{% include "_partials/_header.html" with {title: 'Projet'} %}
+
+<section class="presentation">
+    <div class="wrapper">
+        <h1>Le pendule</h1>
+
+        <div class="info_projet">
+            <div class="projet_sorte">
+                <h3>projet étudiant</h3>
+            </div>
+
+            <div class="projet_type">
+                <h3>animation 3d</h3>
+            </div>
+
+            <div class="projet_logiciel">
+                <div>
+                    <h4>Blender</h4>
+                    <svg class="icon">
+                        <use xlink:href="#icon-blender"></use>
+                    </svg>
+                </div>
+
+                <div>
+                    <h4>Reaper</h4>
+                    <svg class="icon">
+                        <use xlink:href="#icon-reaper"></use>
+                    </svg>
+                </div>
+
+                <div>
+                    <h4>after-effects</h4>
+                    <svg class="icon">
+                        <use xlink:href="#icon-after-effect"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "_partials/_footer.html" %}
