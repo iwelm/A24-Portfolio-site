@@ -11,4 +11,9 @@ body {
     line-height: 1.6;
     background-color: var(--color-white);
     overflow-x: hidden;
+
+    .orange {
+        color: var(--color-orange);
+        font-weight: 700;
+    }
 }
