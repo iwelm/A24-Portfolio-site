@@ -1,9 +1,14 @@
+.projets_accueil {
+    margin-bottom: 120px;
+}
+
 .projets {
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     .bouton {
         &:hover {
             background-color: var(--color-orange);
