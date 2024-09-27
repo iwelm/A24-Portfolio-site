@@ -16,4 +16,17 @@ body {
         color: var(--color-orange);
         font-weight: 700;
     }
+
+    .bkg_logiciel {
+        background-color: var(--color-grey);
+        padding: 10px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+            font-size: var(--font-size-logiciel-icon-projet);
+            color: var(--color-white);
+        }
+    }
 }
