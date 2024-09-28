@@ -6,16 +6,6 @@ import Swiper from 'swiper/bundle';
 
 class Main {
   constructor() {
-    const swiperActualite = new Swiper('.swiperActualite', {
-      // Swiper pour actualités
-      slidesPerView: 5,
-      spaceBetween: 0,
-      freeMode: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
     this.init();
   }
 
@@ -25,7 +15,6 @@ class Main {
     new ComponentFactory();
     // Chargement du sprite svg par le système d'icône
     Icons.load();
-    console.log('Initialisation de mon deuxieme carousel');
   }
 }
 new Main();
