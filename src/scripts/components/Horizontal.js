@@ -15,8 +15,7 @@ export default class Horizontal {
       scrollTrigger: {
         trigger: '.horizontal',
         pin: true,
-        scrub: 1,
-        snap: 1,
+        scrub: 4,
         start: 'top top',
         end: () => `+=${contents.length * window.innerWidth}`, // La propriété `end` assurant que chaque section prenne tout le viewport.
       },

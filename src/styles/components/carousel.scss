@@ -1,89 +1,44 @@
-.wrapper-hero {
-    max-width: none;
+.swiper-pagination-bullets {
+    position: static;
+}
+.swiper-pagination-bullet {
+    position: relative;
 
-    .swiper {
-        h1 {
-            position: absolute;
-            top: 13%;
-            left: 12%;
-            color: var(--color-white);
-            max-width: 550px;
-            line-height: 120%;
+    bottom: -2rem;
+    border: 8px solid var(--color-orange);
+    opacity: 1;
+    transition: border 0.4s ease-out;
+}
 
-            @media screen and (max-width: 675px) {
-                max-width: 400px;
-            }
+.swiper-pagination-bullet-active {
+    border-width: calc(var(--size, 20px) / 1);
+}
 
-            @media screen and (max-width: 600px) {
-                max-width: 300px;
-                left: 18%;
-            }
-        }
-
-        margin-top: 30px;
-        height: 72vh;
+.swiper {
+    .swiper-wrapper {
         .swiper-slide {
+            position: relative;
             display: flex;
             justify-content: center;
+            align-items: center;
 
             img {
-                border-radius: 30px;
-                width: 90%;
-                height: auto;
                 object-fit: cover;
-
-                @media screen and (max-width: $breakpoint-md) {
-                    width: 85%;
-                    height: 90%;
-                }
-
-                @media screen and (max-width: $breakpoint-sm) {
-                    width: 80%;
-                    height: 80%;
-                }
-
-                @media screen and (max-width: 600px) {
-                    width: 75%;
-                    height: 70%;
-                }
-            }
-        }
-
-        .swiper-pagination {
-            position: absolute;
-            right: 1%;
-            top: 50%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-
-            @media screen and (max-width: $breakpoint-md) {
-                right: 2%;
-            }
-
-            @media screen and (max-width: $breakpoint-sm) {
-                right: 3%;
-            }
-
-            @media screen and (max-width: 600px) {
-                right: 2%;
-                top: 37%;
-            }
-
-            .swiper-pagination-bullet {
-                height: 32px;
-                width: 32px;
-                opacity: 1;
-                background-color: var(--color-dark-blue);
-                color: var(--color-dark-blue);
-                transition: all 0.4s ease-out;
-            }
-            .swiper-pagination-bullet-active {
-                transform: scale(1.5);
-                background-color: var(--color-light-blue);
+                width: 50%;
+                max-height: 400px;
             }
         }
     }
+}
+.swiper-backface-hidden {
+    min-height: 600px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-white);
 }

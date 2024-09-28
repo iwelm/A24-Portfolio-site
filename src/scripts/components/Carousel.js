@@ -3,9 +3,8 @@ export default class Carousel {
   constructor(elementHTML) {
     this.elementHTML = elementHTML;
     this.options = {
-      direction: 'vertical',
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
       pagination: {
         el: this.elementHTML.querySelector('.swiper-pagination'),
         clickable: true,
@@ -16,23 +15,6 @@ export default class Carousel {
         prevEl: this.elementHTML.querySelector('.swiper-button-prev'),
       },
     };
-
-    this.options.breakpoints = {
-      768: {
-        spaceBetween: 5,
-      },
-    };
-
-    // Swiper pour actualités
-    /* const swiperActualite = new Swiper('.swiperActualite', {
-      slidesPerView: 4.5,
-      spaceBetween: 0,
-      pagination: {
-        el: '.swiper-pagination-actualite',
-        clickable: true,
-      },
-    });
-*/
     this.init();
   }
   init() {
@@ -42,39 +24,11 @@ export default class Carousel {
   }
 
   setOptions() {
-    if ('horizontal' in this.elementHTML.dataset) {
-      this.options = {
-        direction: 'horizontal',
-        slidesPerView: 4,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      };
-    }
-
     console.log(this.elementHTML.dataset.split);
     if ('split' in this.elementHTML.dataset) {
       this.options.breakpoints = {
-        1024: {
-          slidesPerView: 4,
-        },
-
         768: {
-          slidesPerView: 3,
-        },
-
-        570: {
-          slidesPerView: 2,
-        },
-
-        480: {
-          slidesPerView: 1,
-        },
-
-        1: {
-          slidesPerView: 1,
+          slidesPerView: 2.5,
         },
       };
     }
