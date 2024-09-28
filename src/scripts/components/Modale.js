@@ -4,38 +4,39 @@ export default class Modale {
   }
 
   init() {
-    console.log('Modale');
-    const boutonsModale = document.querySelectorAll(
-      '.swiper-slide .swiper-slide-active'
-    );
+    const boutonsModale = document.querySelectorAll('.swiper-slide img'); // Sélectionne toutes les images
     const modale = document.querySelector('.modale');
 
-    for (let i = 0; i < boutonsModale.length; i++) {
-      boutonsModale[i].addEventListener('click', this.openModale.bind(this)); // Binding to use 'this' correctly
-      const img = boutonsModale[i].querySelector('img');
-      if (img) {
-        img.addEventListener('click', this.openModale.bind(this));
+    // Ajoute un événement à chaque image pour ouvrir la modale
+    boutonsModale.forEach((img) => {
+      img.addEventListener('click', (event) => {
+        this.openModale(event, modale);
+      });
+    });
+
+    // Ferme la modale lorsque l'utilisateur clique à l'extérieur de l'image
+    modale.addEventListener('click', (event) => {
+      if (event.target === modale) {
+        this.closeModale(modale);
       }
-    }
+    });
   }
 
-  openModale(event) {
+  openModale(event, modale) {
     event.preventDefault();
-    const imageSrc = event.currentTarget.querySelector('img').src; // Use event.currentTarget instead of this
-    const imageAlt = event.currentTarget.querySelector('img').alt;
-    const modale = document.querySelector('.modale'); // Get the modal here
+    const imageSrc = event.currentTarget.src;
+    const imageAlt = event.currentTarget.alt;
     const modaleImage = modale.querySelector('img');
 
     modaleImage.src = imageSrc;
     modaleImage.alt = imageAlt;
 
-    modale.classList.add('visible');
-    modale.addEventListener('click', this.closeModale.bind(this));
+    modale.classList.add('visible'); // Affiche la modale
+    document.body.style.overflow = 'hidden';
   }
 
-  closeModale(event) {
-    if (event.target !== this) return;
-    const modale = document.querySelector('.modale'); // Get the modal here
-    modale.classList.remove('visible');
+  closeModale(modale) {
+    modale.classList.remove('visible'); // Cache la modale
+    document.body.style.overflow = 'visible';
   }
 }

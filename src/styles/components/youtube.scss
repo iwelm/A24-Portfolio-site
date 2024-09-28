@@ -6,7 +6,6 @@
     color: var(--color-white);
     text-align: center;
     margin-bottom: 150px;
-
     @media screen and (max-width: $breakpoint-md) {
         padding-bottom: 0;
     }
@@ -20,7 +19,7 @@
         display: block;
         width: 100%;
         max-height: 500px;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 4 / 3;
     }
 
     .icon {
@@ -46,7 +45,7 @@
 .youtube__media {
     @include cover();
     border-radius: 30px;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     max-height: 500px;
     width: 100%;

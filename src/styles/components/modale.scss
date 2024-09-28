@@ -1,25 +1,39 @@
-.modale {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 11;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 80%);
+.horizontal {
+    .wrapper {
+        max-width: none;
 
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
+        .modale {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 80%);
+            display: none; /* Modale cachée par défaut */
+            justify-content: center;
+            align-items: center;
 
-.visible {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
+            h1 {
+                font-size: var(--font-size-h1-projets);
+                color: var(--color-orange);
+            }
+        }
 
-.visible img {
-    height: 500px;
-    width: 500px;
+        .modale.visible {
+            display: flex; /* Affiche la modale lorsque la classe "visible" est ajoutée */
+            overflow-y: hidden; /* Désactive le défilement */
+        }
+
+        .modale img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        body.noscroll {
+            overflow: hidden; /* Désactive le défilement */
+        }
+    }
 }
