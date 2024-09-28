@@ -32,11 +32,13 @@ export default class Modale {
     modaleImage.alt = imageAlt;
 
     modale.classList.add('visible'); // Affiche la modale
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowX = 'hidden';
   }
 
   closeModale(modale) {
     modale.classList.remove('visible'); // Cache la modale
-    document.body.style.overflow = 'visible';
+    document.body.style.overflowY = 'visible';
+    document.body.style.overflowX = 'hidden';
   }
 }
