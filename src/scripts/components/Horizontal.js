@@ -16,8 +16,14 @@ export default class Horizontal {
         trigger: '.horizontal',
         pin: true,
         scrub: 4,
-        start: 'top top',
+
         end: () => `+=${contents.length * window.innerWidth}`, // La propriété `end` assurant que chaque section prenne tout le viewport.
+
+        onUpdate: () => {
+          // Assure-toi que le padding du pin-spacer soit réduit à 0
+          const pinSpacer = document.querySelector('.horizontal').parentNode;
+          pinSpacer.style.padding = '200'; // Supprime le padding ajouté par ScrollTrigger
+        },
       },
     });
   }
