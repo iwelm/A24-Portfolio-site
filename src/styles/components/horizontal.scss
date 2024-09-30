@@ -2,14 +2,11 @@
     .wrapper {
         display: flex;
         position: relative;
-        bottom: -20%;
+        top: 30%;
 
         .content {
             width: 100vw;
             flex: 0 0 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
     }
 }
