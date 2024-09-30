@@ -1,6 +1,11 @@
 .projet_modelisation {
     .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
         h2 {
+            margin-top: 0;
             font-size: var(--font-size-h2-projet);
         }
 
