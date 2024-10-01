@@ -6,7 +6,7 @@ export default class Modale {
   init() {
     const boutonsModale = document.querySelectorAll('.swiper-slide img'); // Sélectionne toutes les images
     const modale = document.querySelector('.modale');
-    const closeModaleX = document.querySelector('.close-modale');
+    this.closeModaleX = document.querySelector('.modale-close');
 
     // Ajoute un événement à chaque image pour ouvrir la modale
     boutonsModale.forEach((img) => {
@@ -20,6 +20,10 @@ export default class Modale {
       if (event.target === modale) {
         this.closeModale(modale);
       }
+    });
+
+    this.closeModaleX.addEventListener('click', () => {
+      this.closeModale(modale);
     });
   }
 
