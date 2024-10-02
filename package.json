@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "nodemailer": "^6.9.15",
     "swiper": "^11.1.14"
   },
   "devDependencies": {
