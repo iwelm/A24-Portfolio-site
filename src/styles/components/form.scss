@@ -1,17 +1,17 @@
 .formulaire {
-    background-color: var(--color-dark-blue);
-    margin-bottom: 110px;
-    border-radius: 30px;
+    margin: 100px 0 120px 0;
     .wrapper {
         padding: 30px 0 50px 0;
 
-        h2 {
-            color: var(--color-white-blue);
-            margin: 0;
+        h1 {
+            text-transform: uppercase;
+            color: var(--color-grey);
+            margin: 0 0 120px 0;
+            font-size: var(--font-size-h1-projets);
         }
 
         p {
-            color: var(--color-white-blue);
+            color: var(--color-grey);
             font-weight: 400;
             font-size: 22px;
         }
@@ -46,7 +46,7 @@
         }
 
         @media screen and (min-width: $breakpoint-md) {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             column-gap: 90px;
             row-gap: 70px;
         }
@@ -55,22 +55,23 @@
 
 .form_footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     .button {
         cursor: pointer;
         padding: 11px 50px;
-        border-radius: 5px;
+        border-radius: 15px;
         border: none;
         text-transform: uppercase;
-        background-color: var(--color-white-blue);
-        color: var(--color-dark-blue);
-        transition: all 0.7s $ease-out-expo;
+        border: 1px solid var(--color-grey);
+        color: var(--color-grey);
+        transition: all 1.2s $ease-out-expo;
         margin-top: 30px;
+        transform: scale(1);
 
         &:hover {
-            background-color: var(--color-light-blue);
-            color: var(--color-white-blue);
+            color: var(--color-white);
+            transform: scale(1.2);
         }
     }
 }
@@ -93,34 +94,35 @@
     display: block; // Mets le texte au dessus de la boite
     font-weight: 300;
     font-size: 22px;
-    color: var(--color-white-blue);
+    color: var(--color-grey);
 }
 
 .input_element {
     transition: all 0.8s $ease-out-expo;
-    border-radius: 20px 20px 0 0;
 
     color: var(--color-white-blue);
     padding: 1em;
     background: none;
-    border: none;
-    border-bottom: 1px solid var(--color-light-blue);
+    border-radius: 20px;
+    border: 1px solid var(--color-grey);
     cursor: pointer;
     font-family: inherit;
     outline: none;
     width: 100%;
     transition: all 0.8s $ease-out-expo;
+    transform: scale(1);
 
     //hover
     &:hover {
-        background-color: var(--color-light-blue);
         -webkit-box-shadow: inset 0 0 0 30px none !important; // L'espece de carrées plus sombres en hover à l'interieur du bleu
-        border-radius: 20px 20px 0 0;
+        border-radius: 15px;
+        transform: scale(1.02);
+        box-shadow: 0px 4px 20px rgba(84, 84, 84, 1);
     }
 
     &::placeholder {
         color: rgba(
-            $color: #daf1f7,
+            $color: #7d7c7a,
             $alpha: 0.7
         ); // Couleur du texte dans le placeholder
     }

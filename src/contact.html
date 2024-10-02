@@ -1,0 +1,61 @@
+{% include "_partials/_header.html" with {title: 'Contact'} %}
+
+<section class="formulaire">
+    <div class="wrapper">
+        <h1>Me contacter</h1>
+        <form action="#" class="form" data-component="Form">
+            <div class="form_body">
+                <fieldset class="grid-form">
+                    <div class="input">
+                        <label class="input_label" for="lastname">Nom</label>
+                        <input class="input_element" type="text" name="lastname" id="lastname" placeholder="Votre nom" required />
+                        <p>Veuillez ajouter votre nom</p>
+                    </div>
+
+                    <div class="input">
+                        <label class="input_label" for="firstname">Prénom</label>
+                        <input class="input_element" type="text" name="firstname" id="firstname" placeholder="Votre prénom" required />
+                        <p>Veuillez ajouter votre prénom</p>
+                    </div>
+
+                    <div class="input">
+                        <label class="input_label" for="name">Adresse email</label>
+                        <input class="input_element" type="email" name="email" id="email" placeholder="2057691@cegepmontpetit.ca" required />
+                        <p>Veuillez ajouter votre adresse courriel</p>
+                    </div>
+
+                    <div class="input">
+                        <label class="input_label" for="phone">Téléphone</label>
+                        <input
+                            class="input_element"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="(418) 620-5020"
+                            pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s\.\-]?\d{3}[\s\.\-]?\d{4}$"
+                            required
+                        />
+                        <p>Veuillez ajouter un numéro de téléphone</p>
+                    </div>
+
+                    <div class="input textarea u-grid-fullwidth">
+                        <label class="input_label" for="comment">Commentaire</label>
+                        <textarea class="input_element" name="comment" id="comment" maxlength="500" required></textarea>
+                        <p>Veuillez ajouter un commentaire</p>
+                    </div>
+                </fieldset>
+
+                <footer class="form_footer">
+                    <button class="button">Envoyer</button>
+                </footer>
+            </div>
+
+            <div class="form_confirmation">
+                <h2>Envoyé!</h2>
+                <p>Votre requête à été soumis avec succès</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% include "_partials/_footer.html" %}
