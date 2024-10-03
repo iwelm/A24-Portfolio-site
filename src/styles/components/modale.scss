@@ -18,6 +18,7 @@
             h1 {
                 font-size: var(--font-size-h1-projets);
                 color: var(--color-orange);
+                text-shadow: 0px 4px 5px rgba(238, 236, 225, 1);
             }
         }
 
@@ -39,9 +40,13 @@
 
         .modale img {
             max-width: 80%;
-            max-height: 80%;
+            border: 2px solid var(--color-orange);
+            box-shadow: 0px 4px 20px rgba(233, 99, 46, 1);
+            max-height: 850px;
             object-fit: cover;
             position: relative;
+            width: 100%;
+            height: auto;
             left: 10%;
         }
 

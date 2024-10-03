@@ -1,17 +1,38 @@
 .projet_information {
+    margin-bottom: 200px;
     .wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
-        h2 {
-            margin-top: 0;
-            font-size: var(--font-size-h2-projet);
-        }
+        gap: 50px;
 
-        p {
-            max-width: 800px;
-            margin-bottom: 30px;
+        .border_info {
+            display: flex;
+            justify-content: center;
+
+            flex-direction: column;
+            padding: 15px 30px;
+            border: 2px solid var(--color-grey);
+            border-radius: 25px;
+            min-height: 500px;
+
+            h2 {
+                margin-top: 0;
+                font-size: var(--font-size-h2-projet);
+                color: var(--color-orange);
+                font-style: italic;
+            }
+
+            p {
+                max-width: 550px;
+                font-size: var(--font-size-p-info-projet);
+            }
         }
     }
+}
+
+.projet_information:last-of-type {
+    // enleve/ajoute le margin sur la dernière section info su projet
+    margin-top: 180px;
+    margin-bottom: 0;
 }
