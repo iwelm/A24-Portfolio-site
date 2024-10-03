@@ -1,7 +1,7 @@
 export default class Header {
   constructor(element) {
     this.element = element;
-    this.options = { treshold: 0.1 };
+    this.options = { treshold: 0 };
     this.scrollPosition = 0;
     this.lastScrollPosition = 0;
     this.html = document.documentElement;

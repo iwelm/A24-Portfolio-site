@@ -16,7 +16,6 @@ export default class Horizontal {
         trigger: '.horizontal',
         pin: true,
         scrub: 0.5,
-        start: 'top top',
         end: () => `+=${contents.length * window.innerWidth}`, // La propriété `end` assurant que chaque section prenne tout le viewport.
       },
     });

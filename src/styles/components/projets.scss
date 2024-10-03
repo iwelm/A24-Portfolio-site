@@ -67,7 +67,7 @@
 .projet {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 0 0 50px 0;
+
     max-width: $breakpoint-lg;
 
     .left {
