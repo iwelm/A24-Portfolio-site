@@ -28,13 +28,19 @@
             .hero_p {
                 display: flex;
                 justify-content: flex-start;
-                align-items: center;
-                gap: 20px;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
                 font-size: var(--font-size-p-hero);
+                padding: 10px;
                 color: var(--color-white);
                 text-transform: uppercase;
                 font-weight: 600;
                 text-shadow: 0px 4px 40px rgba(84, 84, 84, 1);
+
+                p {
+                    margin: 0;
+                }
             }
 
             .bouton {
