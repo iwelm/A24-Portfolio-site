@@ -13,10 +13,9 @@
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
-    max-width: var(--font-size-btn_hero_width);
     font-size: var(--font-size-btn-hero);
     border: 1px solid var(--color-grey);
-    padding: 5px 20px;
+    padding: 10px 20px;
     align-items: center;
     transform: translateY(0%) scale(1); // Animations des boutons dans le menu, état NON HOVER
     transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
@@ -26,35 +25,32 @@
         text-decoration: none;
     }
 
-    @media screen and (min-width: $breakpoint-nav) {
-        color: var(--color-grey);
-        position: relative;
-        text-transform: uppercase;
+    color: var(--color-grey);
+    position: relative;
+    text-transform: uppercase;
 
-        &::before {
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            content: '';
-            transition: 0.3s all;
-            border: 0px;
+    &::before {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        content: '';
+        transition: 0.3s all;
+        border: 0px;
+    }
+
+    &:hover {
+        a {
+            color: var(--color-white);
         }
 
-        &:hover {
-            a {
-                color: var(--color-white);
-            }
-
-            text-decoration: none;
-            background-color: var(--color-orange);
-            transform: translateY(20%) scale(1.03); // Animations des boutons dans le menu, état HOVER ACTIF
-            box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.3); // Animations des boutons dans le menu, état HOVER ACTIF
-        }
+        text-decoration: none;
+        background-color: var(--color-orange);
+        transform: translateY(20%) scale(1.03); // Animations des boutons dans le menu, état HOVER ACTIF
+        box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.3); // Animations des boutons dans le menu, état HOVER ACTIF
     }
 }
 .tous {
-    max-width: none;
     padding: 20px 40px;
     border: 3px solid var(--color-grey);
     margin-top: 50px;
@@ -72,10 +68,13 @@
 .projet {
     display: grid;
     grid-template-columns: 1fr 2fr;
+
     max-width: $breakpoint-lg;
 
-    @media screen and (max-width: $breakpoint-nav) {
+    @media screen and (max-width: $breakpoint-smm) {
         grid-template-columns: 1fr;
+        border: 1px solid var(--color-grey);
+        border-radius: 20px;
     }
 
     .left {
@@ -86,6 +85,12 @@
         flex-direction: column;
         justify-content: space-between;
         gap: var(--gap-about);
+
+        @media screen and (max-width: $breakpoint-smm) {
+            justify-content: center;
+
+            border: none;
+        }
 
         h3 {
             text-transform: uppercase;
@@ -131,6 +136,14 @@
         border: 1px solid var(--color-grey);
         border-radius: 20px;
         gap: var(--gap-about);
+
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+        }
+
+        @media screen and (max-width: $breakpoint-smm) {
+            border: none;
+        }
 
         p {
             font-size: var(--font-size-p-projet);
