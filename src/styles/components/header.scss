@@ -179,7 +179,7 @@ nav {
             border-radius: 15px;
             min-width: 200px;
             border: 1px solid var(--color-grey);
-            padding: 5px 0px;
+            padding: 5px 0;
             align-items: center;
             transform: translateY(0%) scale(1); // Animations des boutons dans le menu, état NON HOVER
             transition: all 1.2s $ease-out-expo; // Animations des boutons dans le menu, état NON HOVER
@@ -188,6 +188,10 @@ nav {
                 text-decoration: none;
                 color: var(--color-white);
                 background-color: var(--color-orange);
+            }
+
+            @media screen and (max-width: $breakpoint-nav) {
+                padding: 15px 30px;
             }
 
             @media screen and (min-width: $breakpoint-nav) {
