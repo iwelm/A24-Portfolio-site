@@ -2,13 +2,14 @@
     border: 2px solid var(--color-grey);
     border-radius: 30px;
     padding: 35px 35px;
+    margin-top: var(--gap-about);
 
     .grid-accordeon {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 140px;
 
-        @media screen and (max-width: $breakpoint-nav) {
+        @media screen and (max-width: $breakpoint-smm) {
             grid-template-columns: 1fr;
         }
 
