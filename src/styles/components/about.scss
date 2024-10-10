@@ -1,10 +1,10 @@
-.moi {
+.about {
     padding-top: 50px;
     .grid_moi {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
+
         align-items: stretch;
-        gap: 50px;
 
         .info_moi {
             display: flex;
@@ -42,8 +42,7 @@
         }
 
         img {
-            width: 625px;
-            height: 693px;
+            height: var(--img-size-about);
             object-fit: cover;
             border-radius: 20px;
         }
