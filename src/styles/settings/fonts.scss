@@ -6,12 +6,12 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Poppins', sans-serif;
 
-    --font-size-content: #{typo(16px, 18px)};
+    --font-size-content: #{typo(18px, 20px)};
 
     /// Grosseur des textes
     --font-size-h1: #{typo(40px, 80px)};
     --font-size-h2: #{typo(20px, 38px)};
-    --font-size-h3: #{typo(15px, 30px)};
+    --font-size-h3: #{typo(22px, 30px)};
     --font-size-h4: #{typo(14px, 27px)};
     --font-size-p-hero: #{typo(16px, 30px)};
     --font-size-logiciel: #{typo(22px, 26px)};
@@ -26,7 +26,7 @@
     --font-size-btn-plus: #{typo(20px, 24px)};
     --font-size-p-plus: #{typo(14px, 20px)};
     --font-size-p-moi2: #{typo(20px, 26px)};
-    --width-moi: #{typo(170px, 800px)};
+    --width-moi: #{typo(165px, 800px)};
     --font-size-Marquee: #{typo(40px, 90px)};
 
     --font-size-h3-projet: #{typo(25px, 35px)};
@@ -40,5 +40,8 @@
     --font-size-h2-projet: #{typo(20px, 45px)};
     --font-size-p-info-projet: #{typo(16px, 22px)};
 
-    --img-size-about: #{typo(185px, 800px)};
+    --img-width-about: #{typo(185px, 800px)};
+    --img-height-about: #{typo(300px, 800px)};
+    --width-accordeon: #{typo(400px, 780px)};
+    --gap-about: #{typo(15px, 50px)};
 }

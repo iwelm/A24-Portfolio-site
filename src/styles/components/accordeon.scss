@@ -1,16 +1,14 @@
 .accordeon {
-    margin: 0 0 60px 0;
+    border: 2px solid var(--color-grey);
+    border-radius: 30px;
+    padding: 35px 35px;
 
     .grid-accordeon {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 140px;
-        border: 2px solid var(--color-grey);
-        border-radius: 30px;
-        padding: 35px 35px;
-        width: var(--width-moi);
 
-        @media screen and (max-width: $breakpoint-md) {
+        @media screen and (max-width: $breakpoint-nav) {
             grid-template-columns: 1fr;
         }
 
@@ -24,10 +22,11 @@
                 align-items: center;
                 margin-bottom: 20px;
                 border-bottom: 3px solid var(--color-orange);
+
                 transition: transform 1.3s ease;
                 h3 {
                     font-weight: 600;
-                    font-size: var(--font-size-h2);
+
                     color: var(--color-orange);
                     margin: 0 7px 0;
                 }
@@ -61,7 +60,6 @@
                     }
 
                     p {
-                        font-size: var(--font-size-p-plus);
                         margin: 0 0 5px 0;
                     }
                 }
