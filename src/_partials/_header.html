@@ -16,6 +16,10 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Page d'accueil de mon Portfolio">
+        <meta name="author" content="Wilem Lavoie">
+
+
         <title>{{title}}</title>
 
        
@@ -28,7 +32,7 @@
        <section data-component="Scroll">
         <header class="header" data-component="Header" data-scrolly="fromTop">
             <div class="wrapper">
-                <a href="index.html" class="header__brand"><svg class="icon">
+                <a href="index.html" class="header__brand"><svg class="icon" aria-label="Retour à la page d'accueil">
                     <use xlink:href="#icon-logo"></use>
                 </svg></a>
                 <nav class="nav-primary">
@@ -44,7 +48,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button class="header__toggle js-toggle">
+                <button class="header__toggle js-toggle" aria-label="Ouvrir le menu">
                     <span></span>
                     <span></span>
                     <span></span>
