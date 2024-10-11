@@ -1,17 +1,32 @@
 footer {
     margin-top: 120px;
+    margin-bottom: 50px;
     .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+
+        @media screen and (max-width: $breakpoint-smm) {
+            grid-template-columns: 1fr;
+        }
 
         .footer_left {
+            @media screen and (max-width: $breakpoint-smm) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
             a {
                 color: var(--color-orange);
                 text-decoration: none;
                 transition: all 1.2s $ease-out-expo;
-
                 padding: 10px 0;
+
+                @media screen and (max-width: $breakpoint-smm) {
+                    font-weight: 700;
+                }
             }
             &:hover a {
                 font-weight: 900;
@@ -20,12 +35,25 @@ footer {
         }
 
         .footer_right {
+            margin-top: 30px;
+            p {
+                text-align: right;
+
+                @media screen and (max-width: $breakpoint-smm) {
+                    text-align: center;
+                }
+            }
             ul {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
                 gap: 30px;
                 list-style: none;
+                padding: 0;
+
+                @media screen and (max-width: $breakpoint-smm) {
+                    justify-content: center;
+                }
 
                 .bkg_sociaux {
                     background-color: var(--color-grey);
