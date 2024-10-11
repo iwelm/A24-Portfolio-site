@@ -1,6 +1,5 @@
 import Icons from './utils/Icons';
 import ComponentFactory from './ComponentFactory';
-import Swiper from 'swiper/bundle';
 
 // Testez désactiver/activer javascript -- cmd shift P -- dans le navigateur
 

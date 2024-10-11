@@ -4,10 +4,6 @@
    Les éléments de la page vont hérités des propriétés inscrite dans body
    ========================================================================== */
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     color: var(--color-grey);
     font-family: var(--font-primary);
@@ -33,4 +29,29 @@ body {
             color: var(--color-white);
         }
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
 }

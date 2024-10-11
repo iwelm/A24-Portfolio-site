@@ -11,7 +11,10 @@
     "build": "cross-env NODE_ENV=production gulp --openssl-legacy-provider build"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "locomotive-scroll": "^4.1.4",
     "nodemailer": "^6.9.15",
     "swiper": "^11.1.14"
   },
