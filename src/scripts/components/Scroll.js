@@ -7,7 +7,7 @@ export default class Scroll {
 
   init() {
     const lenis = new Lenis({
-      lerp: 0.07,
+      lerp: 0.06,
       wheelMultiplier: 1,
     });
 
