@@ -10,8 +10,17 @@
         .info_projet {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            align-items: center;
+            align-items: stretch;
+            align-content: center;
             width: 100%;
+
+            @media screen and (max-width: $breakpoint-nav) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (max-width: $breakpoint-smm) {
+                grid-template-columns: 1fr;
+            }
 
             .projet_sorte {
                 display: flex;
@@ -20,7 +29,7 @@
                 text-align: center;
                 border: 1px solid var(--color-grey);
                 border-radius: 20px;
-                height: 300px;
+                min-height: 150px;
 
                 h3 {
                     text-transform: uppercase;
@@ -29,9 +38,13 @@
             }
 
             .projet_logiciel {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: fit-content;
+
+                @media screen and (max-width: $breakpoint-nav) {
+                    align-items: stretch;
+                }
 
                 .logiciel_grid {
                     display: flex;
@@ -41,7 +54,7 @@
                     border: 1px solid var(--color-grey);
                     border-radius: 20px;
                     height: 300px;
-                    width: 150px;
+
                     padding: 40px 20px;
 
                     h4 {

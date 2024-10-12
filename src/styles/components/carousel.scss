@@ -3,7 +3,7 @@
 }
 
 .swiper {
-    max-width: 1000px;
+    max-width: var(--img-carousel);
 }
 
 .swiper-slide {
@@ -15,8 +15,10 @@
         object-fit: cover;
         border-radius: 30px;
         display: block;
-        width: 100%;
-        height: 100%;
         aspect-ratio: 16 / 9;
+
+        @media screen and (max-width: $breakpoint-xs) {
+            aspect-ratio: 1 / 1.5;
+        }
     }
 }

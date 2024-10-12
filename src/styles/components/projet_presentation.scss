@@ -6,6 +6,10 @@
         align-items: center;
         gap: 50px;
 
+        @media screen and (max-width: $breakpoint-nav) {
+            flex-direction: column;
+        }
+
         .border_info {
             display: flex;
             justify-content: center;
