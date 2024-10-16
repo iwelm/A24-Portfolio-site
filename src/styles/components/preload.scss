@@ -34,9 +34,14 @@
 
     .counter {
         h1 {
-            font-style: italic;
-            font-weight: 400;
+            font-weight: 700;
             color: var(--color-black); /* Couleur du texte */
         }
     }
+}
+
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
