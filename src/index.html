@@ -1,5 +1,16 @@
 {% include "_partials/_header.html" with {title: 'Accueil'} %}
 
+<section id="preloader" data-component="Preload">
+    <div class="border_counter">
+        <div class="counter">
+            <h1>
+                <span id="count">0</span>
+                %
+            </h1>
+        </div>
+    </div>
+</section>
+
 <section class="hero">
     <video autoplay loop muted playsinline preload="auto" crossorigin="anonymous" src="assets/video/demo_reel_it.1.webm" type="video/webm"></video>
     <div class="wrapper">
