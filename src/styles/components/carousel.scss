@@ -18,7 +18,7 @@
             width: 40%;
             height: 40%;
             left: 33%;
-            bottom: -50px;
+            bottom: -20px;
         }
     }
 }
@@ -36,8 +36,8 @@
         width: inherit;
         height: inherit;
 
-        @media screen and (max-width: $breakpoint-xs) {
-            aspect-ratio: 1 / 1.5;
+        @media screen and (max-width: $breakpoint-nav) {
+            aspect-ratio: 1/1;
         }
     }
 }

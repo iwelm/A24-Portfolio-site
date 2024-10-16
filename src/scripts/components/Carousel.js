@@ -4,7 +4,7 @@ export default class Carousel {
     this.elementHTML = elementHTML;
     this.options = {
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 10,
       pagination: {
         el: this.elementHTML.querySelector('.swiper-pagination'),
         clickable: true,
