@@ -7,6 +7,7 @@ import Accordeon from './components/Accordeon.js';
 import Horizontal from './components/Horizontal.js';
 import Modale from './components/Modale.js';
 import Scroll from './components/Scroll.js';
+import Lottie from './components/Lottie.js';
 
 export default class ComponentFactory {
   constructor() {
@@ -20,6 +21,7 @@ export default class ComponentFactory {
       Horizontal,
       Modale,
       Scroll,
+      Lottie,
     };
     this.init();
   }
