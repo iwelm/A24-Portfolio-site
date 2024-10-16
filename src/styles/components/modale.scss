@@ -17,8 +17,8 @@
 
             h1 {
                 font-size: var(--font-size-h1-projets);
-                color: var(--color-orange);
-                text-shadow: 0px 4px 5px rgba(238, 236, 225, 1);
+                color: var(--color-grey);
+                -webkit-text-stroke: 5px var(--color-orange);
             }
         }
 
