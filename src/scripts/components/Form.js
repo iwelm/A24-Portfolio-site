@@ -15,8 +15,6 @@ export default class Form {
         input.addEventListener('input', this.validateInput.bind(this));
       }
     }
-
-    this.element.addEventListener('submit', this.onSubmit.bind(this));
   }
 
   validate() {

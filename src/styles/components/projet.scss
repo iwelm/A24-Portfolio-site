@@ -3,7 +3,8 @@
     .wrapper {
         h1 {
             text-transform: uppercase;
-            margin: 100px 0 120px 0;
+            margin-top: var(--margin-h1);
+            margin-bottom: var(--margin-h1);
             font-size: var(--font-size-h1-projets);
         }
 
@@ -33,6 +34,7 @@
 
                 h3 {
                     text-transform: uppercase;
+                    font-weight: 9600;
                     font-size: var(--font-size-btn-tous-projet);
                 }
             }

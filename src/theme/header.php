@@ -12,13 +12,6 @@
         gtag('config', 'G-J5E2EYNYKS');
         </script>
 
-
-        <link rel="icon" type="image/png" href="/assets/favicon/favicon-48x48.png" sizes="48x48" />
-        <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Page d'accueil de mon Portfolio">

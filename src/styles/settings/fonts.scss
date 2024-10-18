@@ -34,7 +34,7 @@
     --font-size-h4-projet: #{typo(20px, 30px)};
     --font-size-p-projet: #{typo(16px, 26px)};
     --font-size-logiciel-icon-projet: #{typo(25px, 35px)};
-    --font-size-btn-tous-projet: #{typo(30px, 40px)};
+    --font-size-btn-tous-projet: #{typo(20px, 40px)};
     --font-size-icon-un-projet: #{typo(30px, 55px)};
 
     --font-size-h1-projets: #{typo(40px, 120px)};
@@ -46,4 +46,6 @@
     --width-accordeon: #{typo(400px, 780px)};
     --gap-about: #{typo(15px, 50px)};
     --img-carousel: #{typo(325px, 1000px)};
+
+    --margin-h1: #{typo(40px, 100px)};
 }

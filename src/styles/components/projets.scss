@@ -3,6 +3,8 @@
         text-transform: uppercase;
         margin: 150px 0 0 0;
         font-size: var(--font-size-h1-projets);
+        margin-top: var(--margin-h1);
+        margin-bottom: var(--margin-h1);
     }
 }
 
@@ -190,6 +192,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
             .logiciel-bkg {
                 background-color: var(--color-grey);

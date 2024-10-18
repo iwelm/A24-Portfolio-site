@@ -36,8 +36,11 @@
         width: inherit;
         height: inherit;
 
-        @media screen and (max-width: $breakpoint-nav) {
-            aspect-ratio: 1/1;
+        @media screen and (max-width: $breakpoint-sm) {
+            aspect-ratio: 1/1.1;
+        }
+        @media screen and (max-width: $breakpoint-xss) {
+            aspect-ratio: 1/1.6;
         }
     }
 }
