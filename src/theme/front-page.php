@@ -28,7 +28,7 @@
                         <?php endif; ?>
                     </div>
                     <div data-scrolly="fromBottom">
-                        <a class="bouton" href="projets.html">Mes projets</a>
+                        <a class="bouton" href="https://wlavoie.ca/mes-projets/">Mes projets</a>
                     </div>
                 </div>
             </div>
@@ -39,31 +39,27 @@
                 <div class="grid_moi">
                     <div class="info_moi">
                         <div class="info_moi_1" data-scrolly="fromLeft">
-                            <h2>
-                                Salut! Ravi de faire ta
-                                <span class="orange">connaissance.</span>
-                            </h2>
+                        <?php if(get_field('about_titre')) : ?>
+                            <h2><?php the_field('about_titre'); ?></h2>
+                        <?php endif; ?>
                         </div>
                         <div class="info_moi_2" data-scrolly="fromRight">
-                            <p>
-                                Bonjour je suis
-                                <span class="orange">Wilem Lavoie</span>
-                                et je suis un futur finissant de la TIM. J’aime le
-                                <span class="orange">web</span>
-                                , la
-                                <span class="orange">3D</span>
-                                et le
-                                <span class="orange">design</span>
-                                . Je me qualifie d’optimiste, sympathique et minutieux. Je suis toujours
-                                <span class="orange">ouvert à la critique</span>
-                                , afin de m’améliorer. J’aime les
-                                <span class="orange">idées ambitieuses</span>
-                                qui m’invite à me dépasser.
-                            </p>
-                            <h3>J'adore les projets web et la production 3D.</h3>
+
+                        <?php if(get_field('about_description')) : ?>
+                            <p><?php the_field('about_description'); ?></p>
+                        <?php endif; ?>
+
+                        <?php if(get_field('about_description_resume')) : ?>
+                            <h3><?php the_field('about_description_resume'); ?></h3>
+                        <?php endif; ?>
+
                         </div>
                     </div>
-                    <img src="assets/images/moi.jpg" alt="Portrait photo de moi" data-scrolly="fromRight" />
+                    <?php 
+                        $image = get_field('about_image');
+                            if( !empty( $image ) ): ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Portrait photo de moi" data-scrolly="fromRight" />
+                            <?php endif; ?>
                 </div>
                 <div class="accordeon" data-scrolly="fromBottom">
                     <div class="grid-accordeon" data-component="Accordeon" data-not-Closing>
@@ -76,18 +72,13 @@
                             </div>
                             <div class="accordion__content" data-scrolly="fromTop">
                                 <ul>
-                                    <li>
-                                        <p>Curieux</p>
-                                    </li>
-                                    <li>
-                                        <p>Optimiste</p>
-                                    </li>
-                                    <li>
-                                        <p>Sociable</p>
-                                    </li>
-                                    <li>
-                                        <p>Débrouillard</p>
-                                    </li>
+                                <?php if( have_rows('repeteur_je_suis') ): ?>
+                                    <?php while(have_rows('repeteur_je_suis') ): the_row(); ?>
+                                        <li>
+                                            <p><?php the_sub_field('repeteur_je_suis_texte'); ?></p>
+                                        </li>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
                                 </ul>
                             </div>
                         </div>
@@ -101,18 +92,13 @@
                             </div>
                             <div class="accordion__content" data-scrolly="fromTop">
                                 <ul>
-                                    <li>
-                                        <p>Cinéma</p>
-                                    </li>
-                                    <li>
-                                        <p>Sport</p>
-                                    </li>
-                                    <li>
-                                        <p>Musique</p>
-                                    </li>
-                                    <li>
-                                        <p>Jeux vidéos</p>
-                                    </li>
+                                <?php if( have_rows('repeteur_jaime') ): ?>
+                                    <?php while(have_rows('repeteur_jaime') ): the_row(); ?>
+                                        <li>
+                                            <p><?php the_sub_field('repeteur_jaime_texte'); ?></p>
+                                        </li>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
                                 </ul>
                             </div>
                         </div>
@@ -123,96 +109,37 @@
 
         <section class="marquee">
             <div class="marquee_content scroll">
-                <h1>Mes logiciels & langages</h1>
-                <h1>Mes logiciels & langages</h1>
-                <h1>Mes logiciels & langages</h1>
-                <h1>Mes logiciels & langages</h1>
+            <?php if( have_rows('repeteur_marquee_logiciel', 'options') ): ?>
+                <?php while(have_rows('repeteur_marquee_logiciel', 'options') ): the_row(); ?>
+                    <h1><?php the_sub_field('repeteur_marquee_logiciel_texte', 'options'); ?></h1>
+                <?php endwhile; ?>
+            <?php endif; ?>
             </div>
 
             <div class="marquee_content scroll">
-                <h1>Mes logiciels & langages</h1>
-                <h1>Mes logiciels & langages</h1>
-                <h1>Mes logiciels & langages</h1>
-                <h1>Mes logiciels & langages</h1>
+            <?php if( have_rows('repeteur_marquee_logiciel', 'options') ): ?>
+                <?php while(have_rows('repeteur_marquee_logiciel', 'options') ): the_row(); ?>
+                    <h1><?php the_sub_field('repeteur_marquee_logiciel_texte', 'options'); ?></h1>
+                <?php endwhile; ?>
+            <?php endif; ?>
             </div>
         </section>
 
         <section class="logiciel_langage">
             <div class="wrapper">
                 <div class="cards">
-                    <div class="card" data-scrolly="fromTop">
-                        <h4>HTML</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-html"></use>
-                            </svg>
+                <?php if( have_rows('repeteur_logiciel_accueil') ): ?>
+                    <?php while(have_rows('repeteur_logiciel_accueil') ): the_row(); ?>
+                        <div class="card" data-scrolly="from<?php the_sub_field('repeteur_data_scrolly_nom'); ?>">
+                            <h4><?php the_sub_field('repeteur_logiciel_nom'); ?></h4>
+                            <div class="bkg-logiciel">
+                                <svg class="icon icon--xl">
+                                    <use xlink:href="#icon-<?php the_sub_field('repeteur_logiciel_icone_nom'); ?>"></use>
+                                </svg>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card bottom" data-scrolly="fromLeft">
-                        <h4>figma</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-figma"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card" data-scrolly="fromTop">
-                        <h4>CSS</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-css"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card bottom" data-scrolly="fromBottom">
-                        <h4>Blender</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-blender"></use>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="card" data-scrolly="fromTop">
-                        <h4>javascript</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-javascript"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card bottom" data-scrolly="fromBottom">
-                        <h4>php</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-php"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card" data-scrolly="fromTop">
-                        <h4>wordpress</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-wordpress"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card" data-scrolly="fromTop">
-                        <h4>reaper</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-reaper"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="card" data-scrolly="fromTop">
-                        <h4>after-effects</h4>
-                        <div class="bkg-logiciel">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-after-effect"></use>
-                            </svg>
-                        </div>
-                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
                 </div>
             </div>
         </section>
