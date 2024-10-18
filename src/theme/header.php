@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/dist/styles/main.css">
 
         <script>
-                iconsPath = '<?php bloginfo('template_url') ?>/dist/';
+            iconsPath = '<?php bloginfo('template_url') ?>/dist/';
         </script>
 
         <script src="<?php bloginfo('template_url') ?>/dist/scripts/main.js" defer></script>

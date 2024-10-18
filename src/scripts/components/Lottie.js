@@ -8,7 +8,7 @@ export default class Lottie {
 
   init() {
     // Chemin vers votre fichier JSON d'animation Lottie
-    const animationPath = 'assets/lottie/animation_swipe.json'; // Assurez-vous que ce chemin est correct
+    const animationPath = 'assets/lottie/animation.json'; // Assurez-vous que ce chemin est correct
 
     // Récuperer le contenuer HTML du lottie et l'assigner a une variable
     let element = document.querySelector('.lottie-container');

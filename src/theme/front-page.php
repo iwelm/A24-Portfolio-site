@@ -12,15 +12,20 @@
         </section>
 
         <section class="hero">
-            <video autoplay loop muted playsinline preload="auto" crossorigin="anonymous" src="assets/video/demo_reel_it.1.webm" type="video/webm"></video>
+        <?php if(get_field('hero_video')) : ?>
+            <video autoplay loop muted playsinline preload="auto" crossorigin="anonymous" src="<?php echo esc_url(get_field('hero_video')); ?>" type="video/webm"></video>
+            <?php endif; ?>
             <div class="wrapper">
                 <div class="hero_left">
                     <div data-scrolly="fromLeft">
-                        <h1>Wilem Lavoie</h1>
+                        <h1><?php the_title(); ?></h1>
                     </div>
                     <div class="hero_p" data-scrolly="fromTop">
-                        <p>Développeur front-end junior</p>
-                        <p>Animateur 3D</p>
+                    <?php if( have_rows('repeteur_hero_competences') ): ?>
+                        <?php while(have_rows('repeteur_hero_competences') ): the_row(); ?>
+                        <p><?php the_sub_field('repeteur_hero_competence_nom'); ?></p>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                     <div data-scrolly="fromBottom">
                         <a class="bouton" href="projets.html">Mes projets</a>

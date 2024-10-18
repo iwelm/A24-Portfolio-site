@@ -1,10 +1,23 @@
-
 <footer>
 <div class="wrapper">
     <div class="footer_left">
-        <a href="assets/pdf/cv.pdf" target="blank">Mon Curriculum vitæ</a>
-        <p>Téléphone : 438-390-8479</p>
-        <p>Email : wilem.lavoie@gmail.com</p>
+    <?php if(get_field('info_footer_fichier_cv', 'options')) : ?>
+    
+        <?php $file_url = get_field('info_footer_fichier_cv', 'options'); ?>
+
+        <a href="<?php echo esc_url($file_url); ?>" target="_blank">
+            <?php the_field('info_footer_cv', 'options'); ?>
+        </a>
+
+    <?php endif; ?>
+
+        <?php if(get_field('info_footer_telephone', 'options')) : ?>
+            <p><?php the_field('info_footer_telephone', 'options'); ?></p>
+        <?php endif; ?>
+        
+        <?php if(get_field('info_footer_email', 'options')) : ?>
+            <p><?php the_field('info_footer_email', 'options'); ?></p>
+        <?php endif; ?>
     </div>
     <div class="footer_right">
         <ul>
@@ -12,14 +25,14 @@
             <?php while(have_rows('repeteur_icone_footer', 'options') ): the_row(); ?>
                 <li><a href="<?php the_sub_field('url_icone_footer', 'options'); ?>" target="blank"><div class="bkg-sociaux" aria-label="Lien vers mon Github">
                     <svg class="icon">
-                    <use xlink:href="#icon-<?php the_sub_field('nom_icon_footer', 'options'); ?>"></use> 
+                    <use xlink:href="#icon-<?php the_sub_field('nom_icone_footer', 'options'); ?>"></use> 
                 </svg>
                 </div></a></li>
             <?php endwhile; ?>
         <?php endif; ?>
            
         </ul>
-        <p>Tous droits réservés  © 2024 Wilem Lavoie </p>
+        <p>Tous droits réservés  © 2024 Wilem Lavoie </p>
     </div>
 </div>    
 </footer> 
