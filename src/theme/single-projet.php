@@ -3,45 +3,35 @@
 <section class="presentation">
     <div class="wrapper">
         <div data-scrolly="fromLeft">
-            <h1>Le pendule</h1>
+            <h1><?php the_title(); ?></h1>
         </div>
 
         <div class="info_projet" data-scrolly="fromRight">
             <div class="projet_sorte">
-                <h3>projet étudiant</h3>
+                <?php if(get_field('projet_type_but')) : ?>
+                    <h3><?php the_field('projet_type_but'); ?></h3>
+                <?php endif; ?>
             </div>
 
             <div class="projet_sorte">
-                <h3>animation 3d</h3>
+                <?php if(get_field('projet_sorte')) : ?>
+                    <h3><?php the_field('projet_sorte'); ?></h3>
+                <?php endif; ?>
             </div>
 
             <div class="projet_logiciel">
-                <div class="logiciel_grid">
-                    <h4>Blender</h4>
-                    <div class="logiciel-bkg">
-                        <svg class="icon">
-                            <use xlink:href="#icon-blender"></use>
-                        </svg>
+            <?php if( have_rows('repeteur_projet_logiciel') ): ?>
+                <?php while(have_rows('repeteur_projet_logiciel') ): the_row(); ?>
+                    <div class="logiciel_grid">
+                        <h4><?php the_sub_field('repeteur_projet_logiciel_nom_alpha'); ?></h4>
+                        <div class="logiciel-bkg">
+                            <svg class="icon">
+                                <use xlink:href="#icon-<?php the_sub_field('repeteur_projet_logiciel_nom'); ?>"></use>
+                            </svg>
+                        </div>
                     </div>
-                </div>
-
-                <div class="logiciel_grid">
-                    <h4>Reaper</h4>
-                    <div class="logiciel-bkg">
-                        <svg class="icon">
-                            <use xlink:href="#icon-reaper"></use>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="logiciel_grid">
-                    <h4>after-effects</h4>
-                    <div class="logiciel-bkg">
-                        <svg class="icon">
-                            <use xlink:href="#icon-after-effect"></use>
-                        </svg>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+            <?php endif; ?> 
             </div>
         </div>
     </div>
@@ -49,141 +39,86 @@
 
 <section class="video_youtube" data-scrolly="fromBottom">
     <div class="wrapper">
-        <div class="youtube" data-component="Youtube" data-youtube-id="ReaEeeChmpg?si">
-            <!--https://www.youtube.com/embed/ReaEeeChmpg?si=xHoUC96Fx8HQARjS--URL VIDEO-->
 
-            <div class="youtube__media js-youtube">
-                <img class="js-poster" src="assets/images/pendule_yt.webp" alt="pendule" />
+        <?php if(get_field('youtube_id')) : ?>             
+            <div class="youtube" data-component="Youtube" data-youtube-id="<?php the_field('youtube_id'); ?>">
+        <?php endif; ?>
 
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-play"></use>
-                </svg>
+                <div class="youtube__media js-youtube">
+                    <?php 
+                        $image = get_field('youtube_image');
+                            if( !empty( $image ) ): ?>
+                            <img class="js-poster" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Portrait photo de moi" data-scrolly="fromRight" />
+                    <?php endif; ?>
+                   
+
+                    <svg class="icon icon--xl">
+                    <?php if(get_field('youtube_id')) : ?>
+                        <use xlink:href="#icon-<?php the_field('youtube_icone'); ?>"></use>
+                        <?php endif; ?>
+                    </svg>
+                </div>
             </div>
-        </div>
     </div>
 </section>
 
 <section class="marquee">
-    <div class="marquee_content scroll">
-        <h1>Informations du projet</h1>
-        <h1>Informations du projet</h1>
-        <h1>Informations du projet</h1>
-        <h1>Informations du projet</h1>
-    </div>
-
-    <div class="marquee_content scroll">
-        <h1>Informations du projet</h1>
-        <h1>Informations du projet</h1>
-        <h1>Informations du projet</h1>
-        <h1>Informations du projet</h1>
-    </div>
-</section>
-
-<section class="projet_information">
-    <div class="wrapper">
-        <div class="border_info" data-scrolly="fromLeft">
-            <h2>La modélisation & texture</h2>
-            <p>
-                La modélisation du pendule est très simple. Une seule partie des 10 boules du pendule est composée d’une tige et d’une boule. Le tout est
-                accroché par le haut à la tige principale. Il n’y a pas de texture sur la boule, mais la tige a une texture métallique.
-            </p>
-        </div>
-
-        <div class="swiper" data-component="Carousel" data-loop data-scrolly="fromRight">
-            <div class="swiper-wrapper" data-component="Modale">
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/modelisation1.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/modelisation2.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/modelisation3.webp" alt="Photo d'un restaurant" />
-                </div>
-            </div>
-            <div class="lottie-container" data-component="Lottie"></div>
-        </div>
-
-        <div class="modale">
-            <div class="modale-content">
-                <button class="modale-close"><h1>X</h1></button>
-                <img src="" alt="" class="modale-img" />
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="projet_information">
-    <div class="wrapper">
-        <div class="border_info" data-scrolly="fromLeft">
-            <h2>Organisations & easing</h2>
-            <p>
-                L'organisation et la hiérarchie du projet sont très importantes dans un projet. Chaque dossier est bien nommé avec un bon nom, et le projet
-                Blender utilise une hiérarchie bien organisée, facile à naviguer à l’intérieur. Ce projet fut mes premiers pas dans le easing.
-            </p>
-        </div>
-
-        <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
-            <div class="swiper-wrapper" data-component="Modale">
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/organisation1.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/organisation2.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/organisation3.webp" alt="Photo d'un restaurant" />
-                </div>
+            <div class="marquee_content scroll">
+            <?php if( have_rows('repeteur_marquee_information_projet', 'options') ): ?>
+                <?php while(have_rows('repeteur_marquee_information_projet', 'options') ): the_row(); ?>
+                    <h1><?php the_sub_field('repeteur_marquee_information_projet_texte', 'options'); ?></h1>
+                <?php endwhile; ?>
+            <?php endif; ?>
             </div>
 
-            <!-- N'oubliez pas votre pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="modale">
-            <div class="modale-content">
-                <button class="modale-close"><h1>X</h1></button>
-                <img src="" alt="" class="modale-img" />
+            <div class="marquee_content scroll">
+            <?php if( have_rows('repeteur_marquee_information_projet', 'options') ): ?>
+                <?php while(have_rows('repeteur_marquee_information_projet', 'options') ): the_row(); ?>
+                    <h1><?php the_sub_field('repeteur_marquee_information_projet_texte', 'options'); ?></h1>
+                <?php endwhile; ?>
+            <?php endif; ?>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="projet_information">
-    <div class="wrapper">
-        <div class="border_info" data-scrolly="fromLeft">
-            <h2>Environnement</h2>
-            <p>
-                L’environnement est composé d'un plan qui reflète la lumière du pendule et de quatre lumières de scène. L'ambiance est sombre, avec seulement le
-                pendule comme source de véritable lumière.
-            </p>
-        </div>
 
-        <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
-            <div class="swiper-wrapper" data-component="Modale">
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/environnement1.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/environnement2.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/environnement3.webp" alt="Photo d'un restaurant" />
-                </div>
-            </div>
+<?php if( have_rows('repeteur_info_projet_section') ): ?>
+    <?php while(have_rows('repeteur_info_projet_section') ): the_row(); ?>
+        <section class="projet_information">
+            <?php if( have_rows('repeteur_info_projet') ): ?>
+                <?php while(have_rows('repeteur_info_projet') ): the_row(); ?>
+                    <div class="wrapper">
+                        <div class="border_info" data-scrolly="fromLeft">
+                            
+                                <h2><?php the_sub_field('repeteur_info_projet_titre'); ?></h2>
+                                <p><?php the_sub_field('repeteur_info_projet_description'); ?></p>
+                        </div>
 
-            <!-- N'oubliez pas votre pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="modale">
-            <div class="modale-content">
-                <button class="modale-close"><h1>X</h1></button>
-                <img src="" alt="" class="modale-img" />
-            </div>
-        </div>
-    </div>
-</section>
+                        <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
+                            <div class="swiper-wrapper" data-component="Modale">
+                            <?php if( have_rows('repeteur_info_projet_image') ): ?>
+                                <?php while(have_rows('repeteur_info_projet_image') ): the_row(); ?>
+                                <?php  $image = get_sub_field('repeteur_info_projet_image_ici'); ?>
+                                    <div class="swiper-slide">
+                                        <img src="<?php echo esc_url($image['url']); ?>" alt="Photo du projet" />
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                            </div>
+                        </div>
+                                <!-- N'oubliez pas votre pagination -->
+                                <div class="swiper-pagination"></div>
+                        <div class="modale">
+                            <div class="modale-content">
+                                <button class="modale-close"><h1>X</h1></button>
+                                <img src="" alt="" class="modale-img" />
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </section>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <section class="marquee">
     <div class="marquee_content scroll">

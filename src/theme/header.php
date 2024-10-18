@@ -27,6 +27,7 @@
         </script>
 
         <script src="<?php bloginfo('template_url') ?>/dist/scripts/main.js" defer></script>
+        <script src="dist/lottie-web/build/player/lottie.min.js"></script>
         
     </head>
 

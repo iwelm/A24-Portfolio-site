@@ -57,9 +57,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bouton">
-                    <a href="<?php the_permalink(); ?>">Voir le projet</a>
-                    </div>
+               
+                    <a class="bouton" href="<?php the_permalink(); ?>">Voir le projet</a>
+                    
                 </div>
                 <div class="right">
                 <?php if(get_field('projet_description')) : ?>
@@ -70,9 +70,9 @@
                             if( !empty( $image ) ): ?>
                                 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Vignette du projet" />
                             <?php endif; ?>
-                    <div class="bouton-responsive">
-                    <a href="<?php the_permalink(); ?>">Voir le projet</a>
-                    </div>
+                  
+                    <a class="bouton-responsive" href="<?php the_permalink(); ?>">Voir le projet</a>
+                   
                 </div>
             </div>
         </div>

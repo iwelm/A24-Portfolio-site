@@ -7,7 +7,6 @@ import Accordeon from './components/Accordeon.js';
 import Horizontal from './components/Horizontal.js';
 import Modale from './components/Modale.js';
 import Scroll from './components/Scroll.js';
-import Lottie from './components/lottie.js';
 import Preload from './components/Preload.js';
 
 export default class ComponentFactory {
@@ -22,7 +21,6 @@ export default class ComponentFactory {
       Horizontal,
       Modale,
       Scroll,
-      Lottie,
       Preload,
     };
     this.init();
