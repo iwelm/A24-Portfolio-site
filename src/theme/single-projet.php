@@ -104,9 +104,10 @@
                                 <?php endwhile; ?>
                             <?php endif; ?>
                             </div>
-                        </div>
-                                <!-- N'oubliez pas votre pagination -->
+                            <!-- N'oubliez pas votre pagination -->
                                 <div class="swiper-pagination"></div>
+                        </div>
+                                
                         <div class="modale">
                             <div class="modale-content">
                                 <button class="modale-close"><h1>X</h1></button>
