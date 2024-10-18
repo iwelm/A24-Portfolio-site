@@ -1,0 +1,233 @@
+<?php get_header(); ?>
+
+<section class="presentation">
+    <div class="wrapper">
+        <div data-scrolly="fromLeft">
+            <h1>Le pendule</h1>
+        </div>
+
+        <div class="info_projet" data-scrolly="fromRight">
+            <div class="projet_sorte">
+                <h3>projet étudiant</h3>
+            </div>
+
+            <div class="projet_sorte">
+                <h3>animation 3d</h3>
+            </div>
+
+            <div class="projet_logiciel">
+                <div class="logiciel_grid">
+                    <h4>Blender</h4>
+                    <div class="logiciel-bkg">
+                        <svg class="icon">
+                            <use xlink:href="#icon-blender"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="logiciel_grid">
+                    <h4>Reaper</h4>
+                    <div class="logiciel-bkg">
+                        <svg class="icon">
+                            <use xlink:href="#icon-reaper"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="logiciel_grid">
+                    <h4>after-effects</h4>
+                    <div class="logiciel-bkg">
+                        <svg class="icon">
+                            <use xlink:href="#icon-after-effect"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="video_youtube" data-scrolly="fromBottom">
+    <div class="wrapper">
+        <div class="youtube" data-component="Youtube" data-youtube-id="ReaEeeChmpg?si">
+            <!--https://www.youtube.com/embed/ReaEeeChmpg?si=xHoUC96Fx8HQARjS--URL VIDEO-->
+
+            <div class="youtube__media js-youtube">
+                <img class="js-poster" src="assets/images/pendule_yt.webp" alt="pendule" />
+
+                <svg class="icon icon--xl">
+                    <use xlink:href="#icon-play"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="marquee">
+    <div class="marquee_content scroll">
+        <h1>Informations du projet</h1>
+        <h1>Informations du projet</h1>
+        <h1>Informations du projet</h1>
+        <h1>Informations du projet</h1>
+    </div>
+
+    <div class="marquee_content scroll">
+        <h1>Informations du projet</h1>
+        <h1>Informations du projet</h1>
+        <h1>Informations du projet</h1>
+        <h1>Informations du projet</h1>
+    </div>
+</section>
+
+<section class="projet_information">
+    <div class="wrapper">
+        <div class="border_info" data-scrolly="fromLeft">
+            <h2>La modélisation & texture</h2>
+            <p>
+                La modélisation du pendule est très simple. Une seule partie des 10 boules du pendule est composée d’une tige et d’une boule. Le tout est
+                accroché par le haut à la tige principale. Il n’y a pas de texture sur la boule, mais la tige a une texture métallique.
+            </p>
+        </div>
+
+        <div class="swiper" data-component="Carousel" data-loop data-scrolly="fromRight">
+            <div class="swiper-wrapper" data-component="Modale">
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/modelisation1.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/modelisation2.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/modelisation3.webp" alt="Photo d'un restaurant" />
+                </div>
+            </div>
+            <div class="lottie-container" data-component="Lottie"></div>
+        </div>
+
+        <div class="modale">
+            <div class="modale-content">
+                <button class="modale-close"><h1>X</h1></button>
+                <img src="" alt="" class="modale-img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projet_information">
+    <div class="wrapper">
+        <div class="border_info" data-scrolly="fromLeft">
+            <h2>Organisations & easing</h2>
+            <p>
+                L'organisation et la hiérarchie du projet sont très importantes dans un projet. Chaque dossier est bien nommé avec un bon nom, et le projet
+                Blender utilise une hiérarchie bien organisée, facile à naviguer à l’intérieur. Ce projet fut mes premiers pas dans le easing.
+            </p>
+        </div>
+
+        <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
+            <div class="swiper-wrapper" data-component="Modale">
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/organisation1.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/organisation2.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/organisation3.webp" alt="Photo d'un restaurant" />
+                </div>
+            </div>
+
+            <!-- N'oubliez pas votre pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="modale">
+            <div class="modale-content">
+                <button class="modale-close"><h1>X</h1></button>
+                <img src="" alt="" class="modale-img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projet_information">
+    <div class="wrapper">
+        <div class="border_info" data-scrolly="fromLeft">
+            <h2>Environnement</h2>
+            <p>
+                L’environnement est composé d'un plan qui reflète la lumière du pendule et de quatre lumières de scène. L'ambiance est sombre, avec seulement le
+                pendule comme source de véritable lumière.
+            </p>
+        </div>
+
+        <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
+            <div class="swiper-wrapper" data-component="Modale">
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/environnement1.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/environnement2.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/environnement3.webp" alt="Photo d'un restaurant" />
+                </div>
+            </div>
+
+            <!-- N'oubliez pas votre pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="modale">
+            <div class="modale-content">
+                <button class="modale-close"><h1>X</h1></button>
+                <img src="" alt="" class="modale-img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="marquee">
+    <div class="marquee_content scroll">
+        <h1>galerie photo</h1>
+        <h1>galerie photo</h1>
+        <h1>galerie photo</h1>
+        <h1>galerie photo</h1>
+    </div>
+
+    <div class="marquee_content scroll">
+        <h1>galerie photo</h1>
+        <h1>galerie photo</h1>
+        <h1>galerie photo</h1>
+        <h1>galerie photo</h1>
+    </div>
+</section>
+
+<section class="projet_information" data-scrolly="fromBottom">
+    <div class="wrapper">
+        <div class="swiper" data-component="Carousel" data-loop data-autoplay>
+            <div class="swiper-wrapper" data-component="Modale">
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/galerie1.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/galerie2.webp" alt="Photo d'un restaurant" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/pendule/galerie3.webp" alt="Photo d'un restaurant" />
+                </div>
+            </div>
+
+            <!-- N'oubliez pas votre pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="modale">
+            <div class="modale-content">
+                <button class="modale-close"><h1>X</h1></button>
+                <img src="" alt="" class="modale-img" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php get_footer(); ?>
