@@ -105,21 +105,6 @@ add_filter('wp_check_filetype_and_ext', function($data, $file, $filename, $mimes
 }, 10, 4);
 
 
-//ACF pour lottie
-function my_enqueue_scripts() {
-    // Enqueue le script Lottie
-    wp_enqueue_script('lottie', 'dist/scripts/main.js', array(), null, true);
-
-    // Récupérer le chemin du fichier JSON depuis l'ACF
-    $json_path = get_field('lottie_animation_file'); // Remplace 'lottie_animation_file' par le nom exact de ton champ ACF
-
-    // Passe l'URL à JavaScript uniquement si elle existe
-    if ($json_path) {
-        wp_localize_script('lottie', 'lottieData', array('jsonPath' => esc_url($json_path)));
-    }
-}
-add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
-
 
 
 
