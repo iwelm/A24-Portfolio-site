@@ -32,7 +32,8 @@
         <?php endif; ?>
            
         </ul>
-        <p>Tous droits réservés  © 2024 Wilem Lavoie </p>
+        <p> Tous droits réservés  ©2024 Wilem</p>
+        <p>Site intégré sur WordPress</p>
     </div>
 </div>    
 </footer> 

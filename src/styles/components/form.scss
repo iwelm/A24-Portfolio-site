@@ -13,7 +13,7 @@
         p {
             color: var(--color-grey);
             font-weight: 400;
-            font-size: 22px;
+            font-size: var(--font-size-p-formulaire);
         }
 
         .bold {
@@ -85,10 +85,23 @@
 }
 
 .form_confirmation {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    .is-sent & {
-        display: block;
+    h2 {
+        margin-bottom: 40px;
+        color: var(--color-grey);
+        font-size: var(--font-size-h1);
+        text-transform: uppercase;
+        font-style: italic;
+    }
+
+    p {
+        font-size: var(--font-size-p-hero);
+        border-bottom: 5px solid var(--color-orange);
+        text-align: center;
     }
 }
 
@@ -132,7 +145,7 @@
     &:-webkit-autofill,
     &:-webkit-autofill:active {
         -webkit-box-shadow: inset 0 0 0 30px none !important;
-        -webkit-text-fill-color: inherit !important;
+        -webkit-text-fill-color: var(--color-grey) !important;
     }
 
     &::after {
@@ -146,7 +159,7 @@
     }
 
     &:focus {
-        background-color: var(--color-grey);
+        background-color: var(--color-white);
         -webkit-box-shadow: inset 0 0 0 30px none !important;
     }
 }
