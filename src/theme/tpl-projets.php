@@ -18,7 +18,7 @@
                 'post_type' => 'projet',
                 'post_status' => 'publish',
                 'posts_per_page' => '-1',
-                'order' => 'desc',
+                'order' => 'asc',
             );
 
             $query = new WP_Query($arg);
