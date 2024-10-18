@@ -146,120 +146,108 @@
 
         <section class="marquee">
             <div class="marquee_content scroll">
-                <h1>Mes projets</h1>
-                <h1>Mes projets</h1>
-                <h1>Mes projets</h1>
-                <h1>Mes projets</h1>
+            <?php if( have_rows('repeteur_marquee_projets', 'options') ): ?>
+                <?php while(have_rows('repeteur_marquee_projets', 'options') ): the_row(); ?>
+                    <h1><?php the_sub_field('repeteur_marquee_projets_texte', 'options'); ?></h1>
+                <?php endwhile; ?>
+            <?php endif; ?>
             </div>
 
             <div class="marquee_content scroll">
-                <h1>Mes projets</h1>
-                <h1>Mes projets</h1>
-                <h1>Mes projets</h1>
-                <h1>Mes projets</h1>
+            <?php if( have_rows('repeteur_marquee_projets', 'options') ): ?>
+                <?php while(have_rows('repeteur_marquee_projets', 'options') ): the_row(); ?>
+                    <h1><?php the_sub_field('repeteur_marquee_projets_texte', 'options'); ?></h1>
+                <?php endwhile; ?>
+            <?php endif; ?>
             </div>
         </section>
 
         <section class="mes_projets">
             <div class="wrapper">
+
+
+
+        <?php
+            $args = array(
+                'post_type'      => 'projet', 
+                'post_status'    => 'publish',  
+                'posts_per_page' => 2,         
+                'order'          => 'ASC',      
+                'tax_query'      => array(      
+                    array(
+                        'taxonomy' => 'category', 
+                        'field'     => 'slug',    
+                        'terms'     => 'accueil', 
+                        'operator'  => 'IN',      
+                    ),
+                ),
+            );
+            
+            $query = new WP_Query($args);
+        ?>
+
                 <div class="projets">
+
+
+                <?php if ($query->have_posts()) : ?>
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+
                     <div class="projet espace">
                         <div class="left" data-scrolly="fromLeft">
                             <div class="info-left">
                                 <div>
-                                    <h3>Baie-Sainte-Catherine</h3>
-                                    <h4>Intégration web - 2024</h4>
+                                    <h3><?php the_title(); ?></h3>
+
+                                    <?php if(get_field('projet_type')) : ?>
+                                         <h4><?php the_field('projet_type'); ?></h4>
+                                    <?php endif; ?>
+                                
                                 </div>
 
                                 <div>
-                                    <p>Projet étudiant</p>
+                                <?php if(get_field('projet_type_but')) : ?>
+                                         <p><?php the_field('projet_type_but'); ?></p>
+                                    <?php endif; ?>
                                     <div class="logiciel">
-                                        <div class="logiciel-bkg">
-                                            <svg class="icon">
-                                                <use xlink:href="#icon-html"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="logiciel-bkg">
-                                            <svg class="icon">
-                                                <use xlink:href="#icon-css"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="logiciel-bkg">
-                                            <svg class="icon">
-                                                <use xlink:href="#icon-javascript"></use>
-                                            </svg>
-                                        </div>
+                                    <?php if( have_rows('repeteur_projet_logiciel') ): ?>
+                                        <?php while(have_rows('repeteur_projet_logiciel') ): the_row(); ?>
+                                            <div class="logiciel-bkg">
+                                                <svg class="icon">
+                                                    <use xlink:href="#icon-<?php the_sub_field('repeteur_projet_logiciel_nom'); ?>"></use>
+                                                </svg>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="bouton">
-                                <a href="projet.html">Voir le projet</a>
+                                <a href="<?php the_permalink(); ?>">Voir le projet</a>
                             </div>
                         </div>
                         <div class="right" data-scrolly="fromRight">
-                            <p>
-                                Refonte du site de Baie-Sainte-Catherine. Le projet consiste à concevoir le design des parties majeures du site et à l'intégrer sur le
-                                web. Le site est donc autant un défi de
-                                <span class="orange">design</span>
-                                que
-                                <span class="orange">d'intégration web.</span>
-                            </p>
-                            <img src="assets/images/bsc.webp" alt="Vignette du projet Baie-Sainte-Catherine" />
+                        <?php if(get_field('projet_description')) : ?>
+                                         <p><?php the_field('projet_description'); ?></p>
+                                    <?php endif; ?>
+                                    <?php 
+                        $image = get_field('projet_image');
+                            if( !empty( $image ) ): ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Vignette du projet" />
+                            <?php endif; ?>
                             <div class="bouton-responsive">
-                                <a href="projet.html">Voir le projet</a>
+                                <a href="<?php the_permalink(); ?>">Voir le projet</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="projet">
-                        <div class="left" data-scrolly="fromLeft">
-                            <div class="info-left">
-                                <div>
-                                    <h3>L’astéroïde</h3>
-                                    <h4>Animation 3D - 2024</h4>
-                                </div>
-                                <div>
-                                    <p>Projet étudiant</p>
-                                    <div class="logiciel">
-                                        <div class="logiciel-bkg">
-                                            <svg class="icon">
-                                                <use xlink:href="#icon-after-effect"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="logiciel-bkg">
-                                            <svg class="icon">
-                                                <use xlink:href="#icon-reaper"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="logiciel-bkg">
-                                            <svg class="icon">
-                                                <use xlink:href="#icon-blender"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bouton">
-                                <a href="projet.html">Voir le projet</a>
-                            </div>
-                        </div>
-                        <div class="right" data-scrolly="fromRight">
-                            <p>
-                                «L’astéroïde» est un
-                                <span class="orange">projet étudiant</span>
-                                réalisé en
-                                <span class="orange">équipe de deux.</span>
-                                Toute la partie espace est entièrement faite par moi, telle que la modélisation, la mise en scène, l’environnement et le son.
-                            </p>
-                            <img src="assets/images/asteroide.jpg" alt="Vignette du projet Astéroide" />
-                            <div class="bouton-responsive">
-                                <a href="projet.html">Voir le projet</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endwhile ?>
+                <?php endif ?>
+                <?php wp_reset_postdata(); ?>
+
                     <div data-scrolly="fromTop">
                         <div class="bouton tous">
-                            <a href="projets.html">tous mes projets</a>
+                            <a href="https://wlavoie.ca/mes-projets/">tous mes projets</a>
                         </div>
                     </div>
                 </div>
