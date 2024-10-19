@@ -4,6 +4,17 @@
     <div class="wrapper">
         <div data-scrolly="fromLeft">
             <h1><?php the_title(); ?></h1>
+
+            <?php if(get_field('url_projet_web')) : ?>
+                <?php if(get_field('url_projet_web')) : ?>
+                    <a target="blank" href="<?php the_field('url_projet_web'); ?>">
+                        <h2>Voir le site</h2>
+                        <svg class="icon icon--md">
+                            <use xlink:href="#icon-<?php the_field('url_projet_web_icone'); ?>"></use>
+                        </svg>
+                    </a>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
 
         <div class="info_projet" data-scrolly="fromRight">
