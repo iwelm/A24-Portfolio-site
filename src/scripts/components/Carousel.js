@@ -24,15 +24,6 @@ export default class Carousel {
   }
 
   setOptions() {
-    console.log(this.elementHTML.dataset.split);
-    if ('split' in this.elementHTML.dataset) {
-      this.options.breakpoints = {
-        768: {
-          slidesPerView: 2.5,
-        },
-      };
-    }
-
     if ('autoplay' in this.elementHTML.dataset) {
       this.options.autoplay = {
         delay: 4000,
@@ -43,11 +34,6 @@ export default class Carousel {
 
     if ('loop' in this.elementHTML.dataset) {
       this.options.loop = true;
-    }
-
-    if ('slides' in this.elementHTML.dataset) {
-      const slidesValue = this.elementHTML.dataset.slides;
-      this.options.slidesPerView = slidesValue || this.options.slidesPerView;
     }
   }
 }

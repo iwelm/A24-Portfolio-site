@@ -37,48 +37,52 @@
     </div>
 </section>
 
-<section class="video_youtube" data-scrolly="fromBottom">
-    <div class="wrapper">
+<?php if(get_field('youtube_id')) : ?>
+    <?php 
+        $image = get_field('youtube_image');
+            if( !empty( $image ) ): ?>
+                <?php if(get_field('youtube_id')) : ?>                
+                    <section class="video_youtube" data-scrolly="fromBottom">
+                        <div class="wrapper">  
+                            <div class="youtube" data-component="Youtube" data-youtube-id="<?php the_field('youtube_id'); ?>">
+                     
 
-        <?php if(get_field('youtube_id')) : ?>             
-            <div class="youtube" data-component="Youtube" data-youtube-id="<?php the_field('youtube_id'); ?>">
+                                <div class="youtube__media js-youtube">
+                                    
+                                            <img class="js-poster" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Portrait photo de moi" data-scrolly="fromRight" />
+                                    
+                                    
+
+                                    <svg class="icon icon--xl">
+                                    
+                                        <use xlink:href="#icon-<?php the_field('youtube_icone'); ?>"></use>
+                                        
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
         <?php endif; ?>
-
-                <div class="youtube__media js-youtube">
-                    <?php 
-                        $image = get_field('youtube_image');
-                            if( !empty( $image ) ): ?>
-                            <img class="js-poster" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Portrait photo de moi" data-scrolly="fromRight" />
-                    <?php endif; ?>
-                   
-
-                    <svg class="icon icon--xl">
-                    <?php if(get_field('youtube_id')) : ?>
-                        <use xlink:href="#icon-<?php the_field('youtube_icone'); ?>"></use>
-                        <?php endif; ?>
-                    </svg>
-                </div>
-            </div>
-    </div>
-</section>
+    <?php endif; ?>
+<?php endif; ?>
 
 <section class="marquee">
-            <div class="marquee_content scroll">
-            <?php if( have_rows('repeteur_marquee_information_projet', 'options') ): ?>
-                <?php while(have_rows('repeteur_marquee_information_projet', 'options') ): the_row(); ?>
-                    <h1><?php the_sub_field('repeteur_marquee_information_projet_texte', 'options'); ?></h1>
-                <?php endwhile; ?>
-            <?php endif; ?>
-            </div>
+    <div class="marquee_content scroll">
+    <?php if( have_rows('repeteur_marquee_information_projet', 'options') ): ?>
+        <?php while(have_rows('repeteur_marquee_information_projet', 'options') ): the_row(); ?>
+            <h1><?php the_sub_field('repeteur_marquee_information_projet_texte', 'options'); ?></h1>
+        <?php endwhile; ?>
+    <?php endif; ?>
+    </div>
 
-            <div class="marquee_content scroll">
-            <?php if( have_rows('repeteur_marquee_information_projet', 'options') ): ?>
-                <?php while(have_rows('repeteur_marquee_information_projet', 'options') ): the_row(); ?>
-                    <h1><?php the_sub_field('repeteur_marquee_information_projet_texte', 'options'); ?></h1>
-                <?php endwhile; ?>
-            <?php endif; ?>
-            </div>
-        </section>
+    <div class="marquee_content scroll">
+    <?php if( have_rows('repeteur_marquee_information_projet', 'options') ): ?>
+        <?php while(have_rows('repeteur_marquee_information_projet', 'options') ): the_row(); ?>
+            <h1><?php the_sub_field('repeteur_marquee_information_projet_texte', 'options'); ?></h1>
+        <?php endwhile; ?>
+    <?php endif; ?>
+    </div>
+</section>
 
 
 <?php if( have_rows('repeteur_info_projet_section') ): ?>
@@ -123,38 +127,40 @@
 
 <section class="marquee">
     <div class="marquee_content scroll">
-        <h1>galerie photo</h1>
-        <h1>galerie photo</h1>
-        <h1>galerie photo</h1>
-        <h1>galerie photo</h1>
+    <?php if( have_rows('repeteur_marquee_galerie_photo', 'options') ): ?>
+        <?php while(have_rows('repeteur_marquee_galerie_photo', 'options') ): the_row(); ?>
+            <h1><?php the_sub_field('repeteur_marquee_galerie_photo_image', 'options'); ?></h1>
+        <?php endwhile; ?>
+    <?php endif; ?>
     </div>
 
     <div class="marquee_content scroll">
-        <h1>galerie photo</h1>
-        <h1>galerie photo</h1>
-        <h1>galerie photo</h1>
-        <h1>galerie photo</h1>
+    <?php if( have_rows('repeteur_marquee_galerie_photo', 'options') ): ?>
+        <?php while(have_rows('repeteur_marquee_galerie_photo', 'options') ): the_row(); ?>
+            <h1><?php the_sub_field('repeteur_marquee_galerie_photo_image', 'options'); ?></h1>
+        <?php endwhile; ?>
+    <?php endif; ?>
     </div>
 </section>
 
+
+
 <section class="projet_information" data-scrolly="fromBottom">
     <div class="wrapper">
-        <div class="swiper" data-component="Carousel" data-loop data-autoplay>
-            <div class="swiper-wrapper" data-component="Modale">
+    <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
+        <div class="swiper-wrapper" data-component="Modale">
+        <?php if( have_rows('repeteur_galerie_photo') ): ?>
+            <?php while(have_rows('repeteur_galerie_photo') ): the_row(); ?>
+            <?php  $image = get_sub_field('repeteur_galerie_photo_image'); ?>
                 <div class="swiper-slide">
-                    <img src="assets/images/pendule/galerie1.webp" alt="Photo d'un restaurant" />
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="Photo du projet" />
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/galerie2.webp" alt="Photo d'un restaurant" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/images/pendule/galerie3.webp" alt="Photo d'un restaurant" />
-                </div>
-            </div>
-
-            <!-- N'oubliez pas votre pagination -->
-            <div class="swiper-pagination"></div>
+            <?php endwhile; ?>
+        <?php endif; ?>
         </div>
+        <!-- N'oubliez pas votre pagination -->
+            <div class="swiper-pagination"></div>
+    </div>
 
         <div class="modale">
             <div class="modale-content">

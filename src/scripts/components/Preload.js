@@ -6,26 +6,38 @@ export default class Preload {
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('no-scroll');
+      // Vérifie si la page a été rechargée
+      const navigationType = performance.getEntriesByType('navigation')[0].type;
 
-      let count = 0;
-      let counterElement = document.getElementById('count');
-      let interval = setInterval(() => {
-        count++;
-        counterElement.textContent = count;
+      // L'animation de preload ne doit jouer que lors d'un rechargement de page
+      if (navigationType === 'reload') {
+        // Si la page est rechargée (hard refresh)
+        document.body.classList.add('no-scroll');
 
-        if (count === 100) {
-          clearInterval(interval);
+        let count = 0;
+        let counterElement = document.getElementById('count');
+        let interval = setInterval(() => {
+          count++;
+          counterElement.textContent = count;
 
-          const preloader = document.getElementById('preloader');
-          preloader.style.opacity = '0'; // Réduire l'opacité à 0
+          if (count === 100) {
+            clearInterval(interval);
 
-          setTimeout(() => {
-            document.body.classList.remove('no-scroll');
-            preloader.style.display = 'none'; // Masquer le preloader
-          }, 1000); // Durée de la transition
-        }
-      }, 15);
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Réduire l'opacité à 0
+
+            setTimeout(() => {
+              document.body.classList.remove('no-scroll');
+              preloader.style.display = 'none'; // Masquer le preloader
+            }, 1000); // Durée de la transition
+          }
+        }, 15);
+      } else {
+        // Si la navigation est normale (pas un rechargement)
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+      }
     });
   }
 }
