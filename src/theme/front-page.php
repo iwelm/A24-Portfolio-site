@@ -45,14 +45,15 @@
                         </div>
                         <div class="info_moi_2" data-scrolly="fromRight">
 
-                        <?php if(get_field('about_description')) : ?>
-                            <p><?php the_field('about_description'); ?></p>
-                        <?php endif; ?>
+                            <?php if(get_field('about_description')) : ?>
+                                <p><?php the_field('about_description'); ?></p>
+                            <?php endif; ?>
 
-                        <?php if(get_field('about_description_resume')) : ?>
-                            <h3><?php the_field('about_description_resume'); ?></h3>
-                        <?php endif; ?>
-
+                            <?php if(get_field('about_description_resume')) : ?>
+                                <h3><?php the_field('about_description_resume'); ?></h3>
+                            <?php endif; ?>
+                            
+                            <a target="blank" href="https://youtu.be/xiXIlHyPbrA?feature=shared">Vidéo de présentation!</a>
                         </div>
                     </div>
                     <?php 

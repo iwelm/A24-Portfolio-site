@@ -39,15 +39,35 @@
                 border: 2px solid var(--color-grey);
                 border-radius: 20px;
                 display: flex;
-                justify-content: center;
+                justify-content: start;
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+
+                a {
+                    margin-top: 40px;
+                    text-align: start;
+                    color: var(--color-orange);
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    padding: 10px;
+                    border: 2px solid var(--color-grey);
+                    border-radius: 15px;
+                    transform: scale(1);
+                    transition: all 1.2s $ease-out-expo;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        text-decoration: none;
+                        background-color: var(--color-orange);
+                        color: var(--color-white);
+                    }
+                }
 
                 p {
                     margin: 0;
                 }
                 h3 {
-                    color: var(--color-orange);
+                    color: var(--color-grey);
                     margin: 40px 0 0 0;
                 }
             }
