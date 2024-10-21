@@ -50,7 +50,7 @@
                             <p>Veuillez ajouter un commentaire</p>
                         </div>
                     </fieldset>
-
+                    <p><span class="orange">Notes : L'envoi du formulaire est un peu lent. Soyez patient :)</span></p>
                     <section class="form-bas" type="submit" data-scrolly="fromLeft">
                         <button class="button">Envoyer</button>
                     </section>
