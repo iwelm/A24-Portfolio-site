@@ -43,6 +43,25 @@
             p {
                 max-width: 550px;
             }
+
+            a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+                transform: scale(1);
+                transition: all 1.2s $ease-out-expo;
+                color: var(--color-orange);
+                font-weight: 600;
+                font-style: italic;
+                margin-top: 30px;
+                font-size: var(--font-size-p-moi2);
+
+                &:hover {
+                    transform: scale(1.03);
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
