@@ -1,0 +1,29 @@
+.galerie {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 20px;
+
+        @media screen and (max-width: $breakpoint-nav) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: $breakpoint-xss) {
+            grid-template-columns: 1fr;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+
+            img {
+                object-fit: cover;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}

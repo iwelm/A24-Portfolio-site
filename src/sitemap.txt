@@ -1,6 +1,9 @@
 https://wlavoie.ca/
-https://wlavoie.ca/index.html
-https://wlavoie.ca/projets.html
-https://wlavoie.ca/contact.html
-https://wlavoie.ca/projet.html
-https://wlavoie.ca/assets/pdf/cv.pdf
+https://wlavoie.ca/mes-projets/
+https://wlavoie.ca/#section_about
+https://wlavoie.ca/contact/
+https://wlavoie.ca/projets/Baie-Sainte-Catherine/
+https://wlavoie.ca/projet/lasteroide/
+https://wlavoie.ca/projet/le-pendule/
+https://wlavoie.ca/projet/la-soucoupe/
+https://wlavoie.ca/projet/mon-portfolio/

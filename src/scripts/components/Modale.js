@@ -4,7 +4,7 @@ export default class Modale {
   }
 
   init() {
-    const boutonsModale = document.querySelectorAll('.swiper-slide img'); // Sélectionne toutes les images
+    const boutonsModale = document.querySelectorAll('img'); // Sélectionne toutes les images
     const modale = document.querySelector('.modale');
     this.closeModaleX = document.querySelector('.modale-close');
 

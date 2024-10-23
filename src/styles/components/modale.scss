@@ -1,57 +1,57 @@
 .projet_information {
     .wrapper {
         max-width: none;
-
-        .modale {
-            position: fixed;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 80%);
-            display: none; /* Modale cachée par défaut */
-            justify-content: center;
-            align-items: center;
-
-            h1 {
-                font-size: var(--font-size-h1-projets);
-                color: var(--color-grey);
-                -webkit-text-stroke: 5px var(--color-orange);
-            }
-        }
-
-        .modale-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            color: var(--color-orange);
-            cursor: pointer;
-            z-index: 11;
-        }
-
-        .modale.visible {
-            display: flex; /* Affiche la modale lorsque la classe "visible" est ajoutée */
-            overflow-y: hidden; /* Désactive le défilement */
-        }
-
-        .modale img {
-            max-width: 80%;
-            border: 2px solid var(--color-orange);
-            box-shadow: 0px 4px 20px rgba(233, 99, 46, 1);
-            max-height: 850px;
-            object-fit: cover;
-            position: relative;
-            width: 100%;
-            height: auto;
-            left: 10%;
-        }
-
-        body.noscroll {
-            overflow: hidden; /* Désactive le défilement */
-        }
     }
+}
+
+.modale {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 80%);
+    display: none; /* Modale cachée par défaut */
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: var(--font-size-h1-projets);
+        color: var(--color-grey);
+        -webkit-text-stroke: 5px var(--color-orange);
+    }
+}
+
+.modale-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--color-orange);
+    cursor: pointer;
+    z-index: 11;
+}
+
+.modale.visible {
+    display: flex; /* Affiche la modale lorsque la classe "visible" est ajoutée */
+    overflow-y: hidden; /* Désactive le défilement */
+}
+
+.modale img {
+    max-width: 80%;
+    border: 2px solid var(--color-orange);
+    box-shadow: 0px 4px 20px rgba(233, 99, 46, 1);
+    max-height: 850px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 10%;
+}
+
+body.noscroll {
+    overflow: hidden; /* Désactive le défilement */
 }
