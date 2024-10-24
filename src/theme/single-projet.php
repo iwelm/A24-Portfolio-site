@@ -156,31 +156,46 @@
 
 
 
-<section class="projet_information" data-scrolly="fromBottom">
-    <div class="wrapper">
-    <div class="swiper" data-component="Carousel" data-loop data-autoplay data-scrolly="fromRight">
-        <div class="swiper-wrapper" data-component="Modale">
-        <?php if( have_rows('repeteur_galerie_photo') ): ?>
-            <?php while(have_rows('repeteur_galerie_photo') ): the_row(); ?>
-            <?php  $image = get_sub_field('repeteur_galerie_photo_image'); ?>
-                <div class="swiper-slide">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="Photo du projet" />
+<?php if( have_rows('repeteur_galerie_photo') ): ?>
+    <?php while(have_rows('repeteur_galerie_photo') ): the_row(); ?>
+        <section class="galerie" data-scrolly="fromBottom">
+            <div class="wrapper" data-component="Modale">
+                <div class="column">
+                    <?php if( have_rows('repeteur_colonne_un') ): ?>
+                        <?php while(have_rows('repeteur_colonne_un') ): the_row(); ?>
+                            <?php  $image = get_sub_field('repeteur_colonne_un_image'); ?>
+                                <img src="<?php echo esc_url($image['url']); ?>"/>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
-            <?php endwhile; ?>
-        <?php endif; ?>
-        </div>
-        <!-- N'oubliez pas votre pagination -->
-            <div class="swiper-pagination"></div>
-    </div>
 
-        <div class="modale">
-            <div class="modale-content">
-                <button class="modale-close"><h1>X</h1></button>
-                <img src="" alt="" class="modale-img" />
+                <div class="column">
+                    <?php if( have_rows('repeteur_colonne_deux') ): ?>
+                        <?php while(have_rows('repeteur_colonne_deux') ): the_row(); ?>
+                            <?php  $image = get_sub_field('repeteur_colonne_deux_image'); ?>
+                                <img src="<?php echo esc_url($image['url']); ?>"/>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+
+                <div class="column">
+                    <?php if( have_rows('repeteur_colonne_trois') ): ?>
+                        <?php while(have_rows('repeteur_colonne_trois') ): the_row(); ?>
+                            <?php  $image = get_sub_field('repeteur_colonne_trois_image'); ?>
+                                <img src="<?php echo esc_url($image['url']); ?>"/>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="modale">
+                <div class="modale-content">
+                    <button class="modale-close"><h1>X</h1></button>
+                    <img src="" alt="" class="modale-img" />
+                </div>
+            </div>
+        </section>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 
 <?php get_footer(); ?>
