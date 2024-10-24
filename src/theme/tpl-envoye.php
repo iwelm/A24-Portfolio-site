@@ -6,7 +6,7 @@
     <div class="wrapper">
             <div class="form_confirmation">
                 <h2>Envoyé!</h2>
-                <p>Votre message à été soumis avec succès.</p>
+                <p>Votre message a été soumis avec succès.</p>
             </div>
         </form>
     </div>
