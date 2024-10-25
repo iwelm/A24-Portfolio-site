@@ -18,7 +18,6 @@ export default class Carousel {
     this.init();
   }
   init() {
-    console.log('Initialisation de ma composante Carousel');
     this.setOptions();
     const swiper = new Swiper(this.elementHTML, this.options);
   }

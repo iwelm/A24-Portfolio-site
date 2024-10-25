@@ -1,6 +1,5 @@
 export default class Preload {
   constructor() {
-    console.log('Preloader');
     this.init();
   }
 

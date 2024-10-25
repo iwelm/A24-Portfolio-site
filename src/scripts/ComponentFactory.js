@@ -33,7 +33,6 @@ export default class ComponentFactory {
 
     for (let i = 0; i < components.length; i++) {
       const element = components[i];
-      console.log(element);
       const componentName = element.dataset.component;
 
       new this.componentList[componentName](element);

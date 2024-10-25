@@ -6,7 +6,6 @@ export default class Accordeon {
   }
 
   init() {
-    console.log('Initialisation de Accordeon');
     for (let i = 0; i < this.accordeons.length; i++) {
       const accordeon = this.accordeons[i];
       accordeon.addEventListener('click', this.toggleAccordion.bind(this)); // boucle dans tout les this.accordeons et ajoute un ecouteur click qui appel toggleAcordion

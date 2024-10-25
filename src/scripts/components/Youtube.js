@@ -9,7 +9,6 @@ export default class Youtube {
     this.playerReady = false;
 
     Youtube.instances.push(this);
-    console.log(Youtube.instances);
 
     if (this.youtubeId) {
       Youtube.loadScript();

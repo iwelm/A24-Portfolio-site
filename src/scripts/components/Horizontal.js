@@ -3,7 +3,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default class Horizontal {
   constructor() {
-    console.log('Horizontal');
     this.init();
   }
 
