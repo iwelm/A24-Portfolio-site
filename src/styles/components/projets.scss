@@ -131,16 +131,25 @@
     margin-bottom: 50px;
 }
 
+.projets {
+    @media screen and (max-width: $breakpoint-smm) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .projet {
     display: grid;
     grid-template-columns: 1fr 2fr;
-
     max-width: $breakpoint-lg;
 
     @media screen and (max-width: $breakpoint-smm) {
         grid-template-columns: 1fr;
         border: 1px solid var(--color-grey);
+        width: fit-content;
         border-radius: 20px;
+        justify-items: center;
     }
 
     .left {
@@ -149,7 +158,7 @@
         padding: 35px 30px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         gap: var(--gap-about);
 
         @media screen and (max-width: $breakpoint-smm) {
@@ -157,6 +166,7 @@
             justify-content: space-between;
             align-items: center;
             border: none;
+            padding: 20px 20px;
 
             .info-left {
                 display: flex;
@@ -183,6 +193,10 @@
             font-size: var(--font-size-h4-projet);
             font-weight: 300;
             font-style: italic;
+
+            @media screen and (max-width: $breakpoint-smm) {
+                margin: 0 0 20px 0;
+            }
         }
 
         p {
@@ -215,8 +229,13 @@
         border-radius: 20px;
         gap: var(--gap-about);
 
-        @media screen and (max-width: $breakpoint-sm) {
+        @media screen and (max-width: $breakpoint-nav) {
             grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        @media screen and (max-width: $breakpoint-sm) {
+            padding: 20px 20px;
         }
 
         @media screen and (max-width: $breakpoint-smm) {
@@ -225,22 +244,19 @@
 
         p {
             font-size: var(--font-size-p-projet);
-            max-width: 400px;
+
             margin: 0;
 
             @media screen and (max-width: $breakpoint-smm) {
-                max-width: none;
+                display: none;
             }
         }
 
         img {
             object-fit: cover;
             border-radius: 20px;
-
-            @media screen and (max-width: $breakpoint-smm) {
-                border: none;
-                display: none;
-            }
+            max-width: 300px;
+            display: flex;
         }
     }
 }
