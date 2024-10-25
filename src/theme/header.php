@@ -17,7 +17,7 @@
         <meta name="description" content="Page d'accueil de mon Portfolio">
         <meta name="author" content="Wilem Lavoie">
 
-        <title><?php wp_title('|', true, 'right') ?> <?php bloginfo('name'); ?> </title>
+        <title><?php wp_title() ?></title>
         <?php wp_head(); ?>
        
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/dist/styles/main.css">
