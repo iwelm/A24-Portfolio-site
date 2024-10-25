@@ -1,5 +1,6 @@
 .projet_information {
     margin-bottom: 200px;
+
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -24,14 +25,10 @@
         }
 
         .border_info {
-            display: flex;
-            justify-content: center;
-
-            flex-direction: column;
             padding: 15px 30px;
             border: 2px solid var(--color-grey);
             border-radius: 25px;
-            min-height: 500px;
+            max-width: 500px;
 
             h2 {
                 margin-top: 0;
