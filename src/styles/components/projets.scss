@@ -61,10 +61,7 @@
 
 .bouton-responsive {
     margin-top: 20px;
-
-    @media screen and (max-width: $breakpoint-xl) {
-        display: none;
-    }
+    display: none;
 
     @media screen and (max-width: $breakpoint-smm) {
         display: block;
