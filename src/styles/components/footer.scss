@@ -24,13 +24,14 @@ footer {
                 transition: all 1.2s $ease-out-expo;
                 padding: 10px 0;
 
+                &:hover {
+                    font-weight: 900;
+                    letter-spacing: 3%;
+                }
+
                 @media screen and (max-width: $breakpoint-smm) {
                     font-weight: 700;
                 }
-            }
-            &:hover a {
-                font-weight: 900;
-                letter-spacing: 3%;
             }
         }
 
