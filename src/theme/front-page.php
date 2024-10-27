@@ -71,7 +71,7 @@
                                     <use xlink:href="#icon-plus"></use>
                                 </svg>
                             </div>
-                            <div class="accordion__content" data-scrolly="fromTop">
+                            <div class="accordion__content" data-scrolly="fromLeft">
                                 <ul>
                                 <?php if( have_rows('repeteur_je_suis') ): ?>
                                     <?php while(have_rows('repeteur_je_suis') ): the_row(); ?>
@@ -91,7 +91,7 @@
                                     <use xlink:href="#icon-plus"></use>
                                 </svg>
                             </div>
-                            <div class="accordion__content" data-scrolly="fromTop">
+                            <div class="accordion__content" data-scrolly="fromRight">
                                 <ul>
                                 <?php if( have_rows('repeteur_jaime') ): ?>
                                     <?php while(have_rows('repeteur_jaime') ): the_row(); ?>
