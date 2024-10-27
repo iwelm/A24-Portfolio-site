@@ -27,7 +27,6 @@ export default class ComponentFactory {
   }
 
   init() {
-    console.log('Initialisation du ComponentFacory');
     // Scrolly
     const components = document.querySelectorAll('[data-component]');
 

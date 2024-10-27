@@ -132,7 +132,7 @@
                 <?php if( have_rows('repeteur_logiciel_accueil') ): ?>
                     <?php while(have_rows('repeteur_logiciel_accueil') ): the_row(); ?>
                         <div class="card" data-scrolly="from<?php the_sub_field('repeteur_data_scrolly_nom'); ?>">
-                            <h4><?php the_sub_field('repeteur_logiciel_nom'); ?></h4>
+                            <p><?php the_sub_field('repeteur_logiciel_nom'); ?></p>
                             <div class="bkg-logiciel">
                                 <svg class="icon icon--xl">
                                     <use xlink:href="#icon-<?php the_sub_field('repeteur_logiciel_icone_nom'); ?>"></use>
