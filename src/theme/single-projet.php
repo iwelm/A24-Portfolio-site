@@ -182,7 +182,7 @@
                     <?php if( have_rows('repeteur_colonne_trois') ): ?>
                         <?php while(have_rows('repeteur_colonne_trois') ): the_row(); ?>
                             <?php  $image = get_sub_field('repeteur_colonne_trois_image'); ?>
-                                <img src="<?php echo esc_url($image['url']); ?>"/>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"/>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
