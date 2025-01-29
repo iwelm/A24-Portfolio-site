@@ -247,9 +247,7 @@
                 <?php wp_reset_postdata(); ?>
 
                     <div data-scrolly="fromTop">
-                        <div class="bouton tous">
-                            <a href="https://wlavoie.ca/mes-projets/">tous mes projets</a>
-                        </div>
+                        <a class="bouton tous" href="https://wlavoie.ca/mes-projets/">tous mes projets</a>
                     </div>
                 </div>
             </div>
