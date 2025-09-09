@@ -224,6 +224,7 @@
         justify-items: center;
         border-radius: 20px;
         gap: var(--gap-about);
+        align-items: center;
 
         @media screen and (max-width: $breakpoint-nav) {
             grid-template-columns: 1fr;
