@@ -12,11 +12,11 @@
     <?php endif; ?>
 
         <?php if(get_field('info_footer_telephone', 'options')) : ?>
-            <p><?php the_field('info_footer_telephone', 'options'); ?></p>
+            <a href="tel:+14383908479"><?php the_field('info_footer_telephone', 'options'); ?></a>
         <?php endif; ?>
         
         <?php if(get_field('info_footer_email', 'options')) : ?>
-            <p><?php the_field('info_footer_email', 'options'); ?></p>
+            <a href="mailto:wilem.lavoie@gmail.com"><?php the_field('info_footer_email', 'options'); ?></a>
         <?php endif; ?>
     </div>
     <div class="footer_right">

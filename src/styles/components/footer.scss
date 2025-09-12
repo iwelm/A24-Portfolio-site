@@ -11,26 +11,23 @@ footer {
         }
 
         .footer_left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
             @media screen and (max-width: $breakpoint-smm) {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 align-items: center;
             }
 
             a {
-                color: var(--color-orange);
-                text-decoration: none;
+                color: var(--color-grey);
+                text-decoration: underline;
                 transition: all 1.2s $ease-out-expo;
                 padding: 10px 0;
+                scale: (1);
 
                 &:hover {
-                    font-weight: 900;
-                    letter-spacing: 3%;
-                }
-
-                @media screen and (max-width: $breakpoint-smm) {
-                    font-weight: 700;
+                    color: var(--color-orange);
                 }
             }
         }
