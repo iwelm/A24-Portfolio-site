@@ -32,7 +32,7 @@
         <?php endif; ?>
            
         </ul>
-        <p> Tous droits réservés  ©2024 Wilem</p>
+        <p> Tous droits réservés  ©2025 Wilem</p>
         <p>Site intégré sur WordPress</p>
     </div>
 </div>    
