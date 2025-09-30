@@ -18,18 +18,19 @@
         </div>
 
         <div class="info_projet" data-scrolly="fromRight">
-            <div class="projet_sorte">
-                <?php if(get_field('projet_type_but')) : ?>
-                    <h3><?php the_field('projet_type_but'); ?></h3>
-                <?php endif; ?>
-            </div>
+            <div class="projet_sorte_container">
+                <div class="projet_sorte">
+                    <?php if(get_field('projet_type_but')) : ?>
+                        <h3><?php the_field('projet_type_but'); ?></h3>
+                    <?php endif; ?>
+                </div>
 
-            <div class="projet_sorte">
-                <?php if(get_field('projet_sorte')) : ?>
-                    <h3><?php the_field('projet_sorte'); ?></h3>
-                <?php endif; ?>
+                <div class="projet_sorte">
+                    <?php if(get_field('projet_sorte')) : ?>
+                        <h3><?php the_field('projet_sorte'); ?></h3>
+                    <?php endif; ?>
+                </div>
             </div>
-
             <div class="projet_logiciel">
             <?php if( have_rows('repeteur_projet_logiciel') ): ?>
                 <?php while(have_rows('repeteur_projet_logiciel') ): the_row(); ?>

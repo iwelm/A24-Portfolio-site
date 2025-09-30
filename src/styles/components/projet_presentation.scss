@@ -2,34 +2,15 @@
     margin-bottom: 200px;
 
     .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-
-        @media screen and (max-width: $breakpoint-md) {
-            flex-direction: column;
-        }
-
+        max-width: 1440px;
         a {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            gap: 15px;
-
-            h2 {
-                color: var(--color-orange);
-                font-weight: 300;
-                font-style: italic;
-            }
+            text-align: center;
         }
 
         .border_info {
-            padding: 15px 30px;
-            border: 2px solid var(--color-grey);
-            border-radius: 25px;
-            max-width: none;
-
             h2 {
                 margin-top: 0;
                 font-size: var(--font-size-h2-projet);
@@ -38,7 +19,8 @@
             }
 
             p {
-                max-width: 750px;
+                padding-bottom: 20px;
+                max-width: 1240px;
             }
 
             a {

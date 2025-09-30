@@ -54,6 +54,10 @@
         transform: translateY(
             -100%
         ); // *******Animations diparitions du Header*********
+
+        @media screen and (max-width: $breakpoint-xs) {
+            transform: translateY(0);
+        }
     }
 }
 

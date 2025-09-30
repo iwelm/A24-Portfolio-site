@@ -35,38 +35,42 @@
 
         .info_projet {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            align-items: stretch;
+            grid-template-columns: 1fr 1.5fr;
             align-content: center;
-            width: 100%;
 
             @media screen and (max-width: $breakpoint-nav) {
                 grid-template-columns: 1fr;
             }
 
-            .projet_sorte {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                border: 1px solid var(--color-grey);
-                border-radius: 20px;
-                min-height: 150px;
+            .projet_sorte_container {
+                height: 50%;
+                .projet_sorte {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid var(--color-grey);
+                    border-radius: 20px;
+                    height: 100%;
 
-                h3 {
-                    text-transform: uppercase;
-                    font-weight: 9600;
-                    font-size: var(--font-size-h2);
+                    h3 {
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
                 }
             }
 
             .projet_logiciel {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                width: fit-content;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
 
                 @media screen and (max-width: $breakpoint-nav) {
-                    width: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+
+                @media screen and (max-width: $breakpoint-smm) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
                 }
 
                 .logiciel_grid {
@@ -77,12 +81,12 @@
                     border: 1px solid var(--color-grey);
                     border-radius: 20px;
                     gap: 50px;
-
                     padding: 40px 20px;
 
                     h4 {
                         text-transform: uppercase;
                         font-style: italic;
+                        text-align: center;
                         font-size: var(--font-size-p-plus);
                     }
 
