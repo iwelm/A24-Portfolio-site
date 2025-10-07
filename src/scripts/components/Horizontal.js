@@ -10,7 +10,6 @@ export default class Horizontal {
     gsap.registerPlugin(ScrollTrigger);
     const contents = gsap.utils.toArray('.horizontal .wrapper .content');
 
-    // Assure-toi que le contenu est chargé
     window.onload = () => {
       gsap.to(contents, {
         xPercent: -100 * (contents.length - 1),
