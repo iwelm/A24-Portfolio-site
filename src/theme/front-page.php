@@ -141,6 +141,14 @@
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
+                <div class="card" data-scrolly="fromTop">
+                <p>GSAP</p>
+                <div class="bkg-logiciel">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="#icon-gsap"></use>
+                    </svg>
+                </div>
+            </div>
                 </div>
             </div>
         </section>
