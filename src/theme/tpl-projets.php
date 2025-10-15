@@ -11,7 +11,7 @@
 </div>
         
 
-<section class="horizontal" data-component="Horizontal">
+<section class="horizontal">
 
         <?php
             $arg = array(

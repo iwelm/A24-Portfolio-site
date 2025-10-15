@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-        <section id="preloader" data-component="Preload">
+       <section id="preloader" data-component="Preload">
             <div class="border_counter">
                 <div class="counter">
                     <h1>
@@ -9,7 +9,7 @@
                     </h1>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <section class="hero">
         <?php if(get_field('hero_video')) : ?>
@@ -17,17 +17,17 @@
             <?php endif; ?>
             <div class="wrapper">
                 <div class="hero_left">
-                    <div data-scrolly="fromLeft">
+                    <div data-lag="1.3">
                         <h1><?php the_title(); ?></h1>
                     </div>
-                    <div class="hero_p" data-scrolly="fromTop">
+                    <div class="hero_p" data-lag="1.1">
                     <?php if( have_rows('repeteur_hero_competences') ): ?>
                         <?php while(have_rows('repeteur_hero_competences') ): the_row(); ?>
                         <p><?php the_sub_field('repeteur_hero_competence_nom'); ?></p>
                         <?php endwhile; ?>
                         <?php endif; ?>
                     </div>
-                    <div data-scrolly="fromBottom">
+                    <div data-lag="1.1">
                         <a class="bouton" href="https://wlavoie.ca/mes-projets/">Mes projets</a>
                     </div>
                 </div>
@@ -38,12 +38,12 @@
             <div class="wrapper">
                 <div class="grid_moi">
                     <div class="info_moi">
-                        <div class="info_moi_1" data-scrolly="fromLeft">
+                        <div class="info_moi_1" data-speed="1.1">
                         <?php if(get_field('about_titre')) : ?>
                             <h2><?php the_field('about_titre'); ?></h2>
                         <?php endif; ?>
                         </div>
-                        <div class="info_moi_2" data-scrolly="fromRight">
+                        <div class="info_moi_2" data-speed="1.2">
 
                             <?php if(get_field('about_description')) : ?>
                                 <p><?php the_field('about_description'); ?></p>
@@ -59,10 +59,10 @@
                     <?php 
                         $image = get_field('about_image');
                             if( !empty( $image ) ): ?>
-                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Portrait photo de moi" data-scrolly="fromRight" />
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" alt="Portrait photo de moi" data-speed="1.3" />
                             <?php endif; ?>
                 </div>
-                <div class="accordeon" data-scrolly="fromBottom">
+                <div class="accordeon" data-speed="1.3">
                     <div class="grid-accordeon" data-component="Accordeon" data-not-Closing>
                         <div class="accordion__container js-header">
                             <div class="accordion__header" data-scrolly="fromBottom">

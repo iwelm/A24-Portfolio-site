@@ -53,3 +53,5 @@
             </div>
       
         </header>
+      <div data-component="GSAP" id="smooth-wrapper">
+            <div id="smooth-content">
