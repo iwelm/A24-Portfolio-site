@@ -18,3 +18,5 @@ C'est quoi un stack de développement frontend? C'est un ensemble d'outil qui pe
 <br><br><br><hr>
 Préparé par : Matthieu Parent et Jean-François Leblanc  
 _timtools v1.3_
+
+https://mathieudupont.github.io/H24-964/
